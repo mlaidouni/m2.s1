@@ -1,0 +1,3 @@
+[submodule "hackathon-1/weather-map"]
+	path = hackathon-1/weather-map
+	url = git@github.com:mlaidouni/weather-map.git
