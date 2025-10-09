@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://www.asws.com/rois#">
+  <rdf:Description rdf:about="http://www.asws.com/rois#Femme">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Femme">
+    <rdfs:subClassOf rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Homme">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Homme">
+    <rdfs:subClassOf rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Personne">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Reine">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Reine">
+    <rdfs:subClassOf rdf:resource="http://www.asws.com/rois#Femme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Princesse">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Princesse">
+    <rdfs:subClassOf rdf:resource="http://www.asws.com/rois#Femme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Prince">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Prince">
+    <rdfs:subClassOf rdf:resource="http://www.asws.com/rois#Homme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Roi">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#Roi">
+    <rdfs:subClassOf rdf:resource="http://www.asws.com/rois#Homme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#descendant">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#descendant">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#descendant">
+    <rdfs:range rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#enfant">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#enfant">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#enfant">
+    <rdfs:range rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#conjoint">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#conjoint">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#conjoint">
+    <rdfs:range rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epoux">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epoux">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epoux">
+    <rdfs:range rdf:resource="http://www.asws.com/rois#Homme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epoux">
+    <rdfs:subPropertyOf rdf:resource="http://www.asws.com/rois#conjoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epouse">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epouse">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epouse">
+    <rdfs:range rdf:resource="http://www.asws.com/rois#Femme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#epouse">
+    <rdfs:subPropertyOf rdf:resource="http://www.asws.com/rois#conjoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fille">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fille">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fille">
+    <rdfs:range rdf:resource="http://www.asws.com/rois#Femme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fille">
+    <rdfs:subPropertyOf rdf:resource="http://www.asws.com/rois#enfant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fils">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fils">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fils">
+    <rdfs:range rdf:resource="http://www.asws.com/rois#Homme"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#fils">
+    <rdfs:subPropertyOf rdf:resource="http://www.asws.com/rois#enfant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#nom">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#nom">
+    <rdfs:domain rdf:resource="http://www.asws.com/rois#Personne"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.asws.com/rois#nom">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+</rdf:RDF>

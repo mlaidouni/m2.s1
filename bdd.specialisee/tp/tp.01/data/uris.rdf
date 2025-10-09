@@ -1,0 +1,26 @@
+<rdf:RDF xml:base="http://inria.fr/2005/humans.rdfs" 
+xmlns:rdf ="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"> 
+
+<rdfs:Class rdf:ID="Person"/> 
+<rdfs:Class rdf:ID="Female"/> 
+<rdfs:Class rdf:ID="Woman"> 
+  <rdfs:subClassOf rdf:resource="#Person"/>
+  <rdfs:subClassOf rdf:resource="#Female"/> 
+</rdfs:Class> 
+
+
+<rdfs:Class rdf:ID="Man">
+	<rdfs:subClassOf rdf:resource="#Person"/>
+</rdfs:Class> 
+
+
+<rdf:Property rdf:ID="hasParent"/>
+<rdf:Property rdf:ID="hasFather">
+	<rdfs:subPropertyOf rdf:resource="#hasParent"/>
+	<rdfs:domain rdf:resource="#Person"/>
+	<rdfs:range rdf:resource="#Man"/>
+</rdf:Property>
+
+
+</rdf:RDF>
