@@ -1,0 +1,11 @@
+PREFIX asws: <http://www.asws.com/rois#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?h ?j ?a ?v 
+FROM NAMED <../../data/roisdbpedia.ttl>
+FROM NAMED <../../data/rois_schema.ttl>
+WHERE { 
+      GRAPH ?h { ?a ?q ?v . ?a asws:fils asws:Louis_XI . }
+      GRAPH ?j { ?v rdf:type rdfs:Class . }	
+}

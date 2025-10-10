@@ -1,0 +1,7 @@
+#  les ressources de type asws:Roi 
+
+PREFIX asws: <http://www.asws.com/rois#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?a
+WHERE { ?a rdf:type asws:Roi  }
+ORDER BY ?a

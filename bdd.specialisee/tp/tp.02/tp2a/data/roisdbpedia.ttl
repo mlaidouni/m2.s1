@@ -1,0 +1,1946 @@
+# dbpedia/roisall2.ttl
+
+@prefix :      <http://www.asws.com/rois#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Marie-Antoinette_d_Autriche
+        a           :Femme , :Reine ;
+        :datedeces  "1793-10-16+02:00"^^xsd:date ;
+        :datenaiss  "1755-11-02+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Habsbourg-Lorraine ;
+        :enfant     :Marie-Thérèse_de_France_1778-1851 , :Louis-Joseph_de_France_1781-1789 , :Marie-Sophie-Béatrice_de_France , :Louis_XVII ;
+        :epoux      :Louis_XVI_de_France , :Louis_XVI ;
+        :nom        "Marie-Antoinette d Autriche" .
+
+:Philippe_Ier_roi_des_Francs
+        a           :Homme , :Roi ;
+        :datedeces  "1108-07-29+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Constance_de_France_1078-1125 , :Philippe_de_Mantes ;
+        :epouse     :Berthe_de_Hollande , :Bertrade_de_Montfort ;
+        :fils       :Louis_VI_de_France ;
+        :mere       :Anne_de_Kiev ;
+        :nom        "Philippe Ier roi des Francs" ;
+        :pere       :Henri_Ier_roi_des_Francs .
+
+:Jeanne_d_Evreux  a  :Femme , :Reine ;
+        :datedeces  "1371-03-04+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_d_Evreux-Navarre ;
+        :enfant     :Blanche_de_France_1328-1394 ;
+        :epoux      :Charles_IV_de_France ;
+        :nom        "Jeanne d Evreux" ;
+        :parent     :Louis_de_France_1276-1319 , :Marguerite_d_Artois .
+
+:Louis_XI  a        :Roi , :Homme ;
+        :datedeces  "1483-08-30+02:00"^^xsd:date ;
+        :datenaiss  "1423-07-03+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Valois ;
+        :enfant     :Anne_de_France ;
+        :epouse     :Charlotte_de_Savoie , :Marguerite_d_Ecosse_1424-1445 ;
+        :fille      :Jeanne_de_France_1464-1505 ;
+        :fils       :Charles_VIII_de_France ;
+        :mere       :Marie_d_Anjou ;
+        :nom        "Louis XI" ;
+        :pere       :Charles_VII_roi_de_France .
+
+:Charles-Ferdinand_d_Artois
+        a       :Personne ;
+        :nom    "Charles-Ferdinand d Artois" ;
+        :pere   :Charles_X_roi_de_France .
+
+:Adélaïde_d_Anjou  a  :Reine , :Femme ;
+        :enfant  :Guillaume_III_de_Toulouse , :Guillaume_II_de_Provence ;
+        :epoux   :Raymond_V_de_Toulouse , :Louis_V_de_France , :Étienne_de_Gévaudan , :Guillaume_Ier_de_Provence ;
+        :fille   :Constance_d_Arles ;
+        :nom     "Adélaïde d Anjou" ;
+        :parent  :Foulque_II_d_Anjou , :Comté_d_Anjou .
+
+:Marie_Leszczynska  a  :Reine , :Femme ;
+        :datedeces  "1768-06-24+02:00"^^xsd:date ;
+        :datenaiss  "1703-06-23+02:00"^^xsd:date ;
+        :dynastie   :Stanislas_Leszczynski ;
+        :enfant     :Thérèse_de_France_1736-1744 , :Louise_de_France , :Adélaïde_de_France_1732-1800 , :Henriette_de_France_1727-1752 , :Sophie_de_France_1734-1782 , :Louis_de_France_1729-1765 , :Marie-Louise_de_France , :Elisabeth_de_France_1727-1759 , :Victoire_de_France_1733-1799 ;
+        :epoux      :Louis_XV , :Louis_XV ;
+        :nom        "Marie Leszczynska" .
+
+:Isabelle_de_France_1348-1372
+        a       :Personne ;
+        :nom    "Isabelle de France 1348-1372" ;
+        :pere   :Jean_II_le_Bon .
+
+:Anne_de_Bretagne  a  :Femme , :Reine ;
+        :datedeces  "1514-01-09+02:00"^^xsd:date ;
+        :datenaiss  "1477-01-25+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Montfort-l_Amaury ;
+        :enfant     :Charles-Orland_de_France , :Renée_de_France ;
+        :epoux      :Charles_VIII_de_France , :Louis_XII , :Charles_VIII_roi_de_France , :Louis_XII_de_France , :Maximilien_Ier_du_Saint-Empire ;
+        :fille      :Claude_de_France_1499-1524 ;
+        :nom        "Anne de Bretagne" ;
+        :parent     :François_II_de_Bretagne , :Marguerite_de_Foix_morte_en_1486 .
+
+:Henri_Ier_roi_des_Francs  a  :Prince , :Homme , :Roi ;
+        :epouse  :Mathilde_de_Frise , :Anne_de_Kiev ;
+        :mere    :Constance_d_Arles ;
+        :nom     "Henri Ier de France" ;
+        :pere    :Robert_II_le_Pieux .
+
+:Marguerite_de_Bourgogne_1290-1315
+        a           :Reine , :Femme ;
+        :datedeces  "1315-04-30+02:00"^^xsd:date ;
+        :dynastie   :Première_maison_capétienne_de_Bourgogne ;
+        :enfant     :Jeanne_II_de_Navarre ;
+        :epoux      :Louis_X_de_France ;
+        :nom        "Marguerite de Bourgogne 1290-1315" .
+
+:Louis_VII_de_France  a  :Roi , :Homme , :Prince ;
+        :epouse  :Adèle_de_Champagne , :Constance_de_Castille_v_1136-1160 , :Aliénor_d_Aquitaine ;
+        :mere    :Adélaïde_de_Savoie ;
+        :nom     "Louis VII de France" .
+
+:Ferdinand-Philippe_d_Orléans
+        a       :Personne ;
+        :nom    "Ferdinand-Philippe d Orléans" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Geoffroy_II_de_Bretagne
+        a       :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Geoffroy II de Bretagne" .
+
+:Jean_d_Angleterre  a  :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Jean d Angleterre" .
+
+:Louis_Ier_de_Naples  a  :Personne ;
+        :nom    "Louis Ier de Naples" ;
+        :pere   :Jean_II_le_Bon .
+
+:Yolande_de_France  a  :Personne ;
+        :mere   :Marie_d_Anjou ;
+        :nom    "Yolande de France" .
+
+:Marie_de_Luxembourg_1305-1324
+        a           :Reine , :Femme ;
+        :datedeces  "1324-03-21+02:00"^^xsd:date ;
+        :epoux      :Charles_IV_de_France ;
+        :nom        "Marie de Luxembourg 1305-1324" .
+
+:Mathilde_de_Frise  a  :Reine , :Femme ;
+        :epoux  :Henri_Ier_roi_des_Francs ;
+        :nom    "Mathilde de Frise" .
+
+:Adélaïde_de_Frioul  a  :Personne ;
+        :nom    "Adélaïde de Frioul" ;
+        :pere   :Charles_III_le_Simple .
+
+:Philippe_de_France_1336-1375
+        a       :Personne ;
+        :mere   :Jeanne_de_Bourgogne_v_1293-1349 ;
+        :nom    "Philippe de France 1336-1375" .
+
+:Aliénor_d_Aquitaine  a  :Reine , :Femme ;
+        :datedeces  "1204-03-31+02:00"^^xsd:date ;
+        :dynastie   :Ramnulfides ;
+        :enfant     :Alix_de_France_1150-1195 , :Mathilde_d_Angleterre_1156-1189 , :Richard_Ier_d_Angleterre , :Jean_d_Angleterre , :Geoffroy_II_de_Bretagne , :Aliénor_d_Angleterre_1161-1214 , :Henri_le_Jeune , :Marie_de_France_1145-1198 , :Jeanne_d_Angleterre_1165-1199 ;
+        :epoux      :Henri_II_d_Angleterre , :Louis_VII_de_France ;
+        :nom        "Aliénor d Aquitaine" ;
+        :parent     :Aénor_de_Châtellerault , :Guillaume_X_d_Aquitaine .
+
+:Antoine_d_Orléans_1824-1890
+        a       :Personne ;
+        :nom    "Antoine d Orléans 1824-1890" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Philippe_d_Orléans_1640-1701
+        a       :Personne ;
+        :nom    "Philippe d Orléans 1640-1701" ;
+        :pere   :Louis_XIII .
+
+:Alphonse_de_France  a  :Personne ;
+        :nom    "Alphonse de France" ;
+        :pere   :Louis_VIII_de_France .
+
+:Jeanne_II_de_Bourgogne
+        a           :Femme , :Reine ;
+        :datedeces  "1330-01-21+02:00"^^xsd:date ;
+        :dynastie   :Maison_d_Ivrée ;
+        :enfant     :Isabelle_de_France_1312-1348 , :Marguerite_Ire_de_Bourgogne , :Blanche_de_France_1313-1358 , :Jeanne_III_de_Bourgogne ;
+        :epoux      :Philippe_V_de_France ;
+        :nom        "Jeanne II de Bourgogne" .
+
+:Jeanne_de_France_1308-1347
+        a       :Personne ;
+        :nom    "Jeanne de France 1308-1347" ;
+        :pere   :Philippe_V_le_Long .
+
+:Louis_XVII  a  :Personne ;
+        :mere   :Marie-Antoinette_d_Autriche ;
+        :nom    "Louis XVII" ;
+        :pere   :Louis_XVI .
+
+:Frédérune  a   :Reine , :Femme , :Princesse ;
+        :epoux  :Charles_III_le_Simple ;
+        :nom    "Frédérune" ;
+        :pere   :Charles_III_le_Simple .
+
+:Henry_Stuart_Lord_Darnley
+        a        :Roi , :Homme ;
+        :epouse  :Marie_Stuart_reine_d_Ecosse ;
+        :nom     "Henry Stuart Lord Darnley" .
+
+:Henri_de_France_1121-1175
+        a       :Personne ;
+        :mere   :Adélaïde_de_Savoie ;
+        :nom    "Henri de France 1121-1175" .
+
+:Robert_Ier_d_Artois  a  :Personne ;
+        :nom    "Robert Ier d Artois" ;
+        :pere   :Louis_VIII_de_France .
+
+:Radegonde_de_France  a  :Personne ;
+        :mere   :Marie_d_Anjou ;
+        :nom    "Radegonde de France" .
+
+:Marguerite_de_France_reine_d_Angleterre
+        a       :Personne ;
+        :mere   :Marie_de_Brabant_1254-1321 ;
+        :nom    "Marguerite de France reine d Angleterre" ;
+        :pere   :Philippe_IV_le_Bel .
+
+:Louis_X_de_France  a  :Prince , :Homme , :Roi ;
+        :epouse  :Clémence_de_Hongrie , :Marguerite_de_Bourgogne_1290-1315 ;
+        :mere    :Jeanne_Ire_de_Navarre ;
+        :nom     "Louis X de France" ;
+        :pere    :Philippe_IV_le_Bel .
+
+:Jeanne_III_de_Bourgogne
+        a       :Personne ;
+        :mere   :Jeanne_II_de_Bourgogne ;
+        :nom    "Jeanne III de Bourgogne" .
+
+:Ingeburge_de_Danemark
+        a       :Reine , :Femme ;
+        :epoux  :Philippe_II_de_France ;
+        :nom    "Ingeburge de Danemark" .
+
+:Louis_de_France_1549-1550
+        a       :Personne ;
+        :mere   :Catherine_de_Médicis ;
+        :nom    "Louis de France 1549-1550" ;
+        :pere   :Henri_II_roi_de_France .
+
+:Louise_de_France_1515-1518
+        a       :Personne ;
+        :mere   :Claude_de_France_1499-1524 ;
+        :nom    "Louise de France 1515-1518" ;
+        :pere   :François_Ier_roi_de_France .
+
+:Blanche_de_France_1282-1305
+        a       :Personne ;
+        :mere   :Marie_de_Brabant_1254-1321 ;
+        :nom    "Blanche de France 1282-1305" .
+
+:Charles_de_Valois_1270-1325
+        a       :Personne ;
+        :mere   :Isabelle_d_Aragon_1247-1271 ;
+        :nom    "Charles de Valois 1270-1325" .
+
+:Jean_de_France_1398-1417
+        a       :Personne ;
+        :mere   :Isabeau_de_Bavière ;
+        :nom    "Jean de France 1398-1417" .
+
+:Claude_de_France_1547-1575
+        a       :Personne ;
+        :mere   :Catherine_de_Médicis ;
+        :nom    "Claude de France 1547-1575" ;
+        :pere   :Henri_II_roi_de_France .
+
+:Bertrade_de_Laon  a  :Reine , :Femme ;
+        :datedeces  "0783-07-12+02:00"^^xsd:date ;
+        :enfant     :Gisèle_757-810 , :Carloman_Ier ;
+        :epoux      :Pépin_le_Bref ;
+        :fils       :Charlemagne ;
+        :nom        "Bertrade de Laon" ;
+        :parent     :Caribert_de_Laon .
+
+:Louis_XII  a       :Homme , :Roi ;
+        :datedeces  "1515-01-01+02:00"^^xsd:date ;
+        :datenaiss  "1462-06-27+02:00"^^xsd:date ;
+        :dynastie   :Dynastie_des_Valois ;
+        :enfant     :Renée_de_France ;
+        :epouse     :Anne_de_Bretagne , :Marie_d_Angleterre_1496-1533 , :Jeanne_de_France_1464-1505 ;
+        :fille      :Claude_de_France_1499-1524 ;
+        :nom        "Louis XII" ;
+        :parent     :Charles_d_Orléans_1394-1465 , :Marie_de_Clèves_1426-1487 .
+
+:Philippe_de_France_1116-1131
+        a       :Personne ;
+        :mere   :Adélaïde_de_Savoie ;
+        :nom    "Philippe de France 1116-1131" .
+
+:Louis_de_France_1276-1319
+        a       :Personne ;
+        :mere   :Marie_de_Brabant_1254-1321 ;
+        :nom    "Louis de France 1276-1319" .
+
+:Foulque_V_d_Anjou  a  :Personne ;
+        :mere   :Bertrade_de_Montfort ;
+        :nom    "Foulque V d Anjou" .
+
+:Madeleine_de_France_1520-1537
+        a       :Personne ;
+        :mere   :Claude_de_France_1499-1524 ;
+        :nom    "Madeleine de France 1520-1537" ;
+        :pere   :François_Ier_roi_de_France .
+
+:Arnoul_II_de_Flandre
+        a        :Roi , :Homme ;
+        :epouse  :Rozala_d_Italie ;
+        :nom     "Arnoul II de Flandre" .
+
+:Charles_VII_roi_de_France
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Marie_d_Anjou ;
+        :mere    :Isabeau_de_Bavière ;
+        :nom     "Charles VII de France" .
+
+:Louis_VIII_de_France
+        a       :Personne ;
+        :mere   :Isabelle_de_Hainaut ;
+        :nom    "Louis VIII de France" ;
+        :pere   :Philippe_II_de_France .
+
+:Clémence_de_Hongrie  a  :Femme , :Reine ;
+        :datedeces  "1328-10-12+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_d_Anjou-Sicile ;
+        :enfant     :Jean_Ier_de_France ;
+        :epoux      :Louis_X , :Louis_X_de_France ;
+        :nom        "Clémence de Hongrie" .
+
+:Marie_Stuart_reine_d_Ecosse
+        a           :Reine , :Femme ;
+        :datedeces  "1587-02-08+02:00"^^xsd:date ;
+        :datenaiss  "1542-12-08+02:00"^^xsd:date ;
+        :dynastie   :Maison_Stuart ;
+        :enfant     :Jacques_Ier_d_Angleterre ;
+        :epoux      :James_Hepburn , :Henry_Stuart_Lord_Darnley , :François_II_de_France ;
+        :nom        "Marie Stuart reine d Ecosse" ;
+        :parent     :Jacques_V_d_Ecosse , :Marie_de_Guise_1515-1560 .
+
+:François_d_Orléans_1818-1900
+        a       :Personne ;
+        :nom    "François d Orléans 1818-1900" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Jacques_Ier_d_Angleterre
+        a       :Personne ;
+        :mere   :Marie_Stuart_reine_d_Ecosse ;
+        :nom    "Jacques Ier d Angleterre" .
+
+:Marie-Élisabeth_de_France
+        a       :Personne ;
+        :mere   :Elisabeth_d_Autriche_1554-1592 ;
+        :nom    "Marie-Élisabeth de France" ;
+        :pere   :Charles_IX_roi_de_France .
+
+:Gisèle_757-810  a  :Personne ;
+        :mere   :Bertrade_de_Laon ;
+        :nom    "Gisèle 757-810" .
+
+:Gaston_de_France  a  :Personne ;
+        :mere   :Marie_de_Médicis ;
+        :nom    "Gaston de France" ;
+        :pere   :Henri_IV_roi_de_France .
+
+:Jean_II_le_Bon  a  :Homme , :Roi ;
+        :datedeces  "1364-04-08+02:00"^^xsd:date ;
+        :datenaiss  "1319-04-26+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Valois ;
+        :enfant     :Marie_de_France_1344-1404 , :Jeanne_de_France_1343-1373 , :Agnès_de_France_1260-1325 , :Isabelle_de_France_1348-1372 , :Jean_de_Berry , :Louis_Ier_de_Naples , :Philippe_II_de_Bourgogne ;
+        :epouse     :Jeanne_Ire_d_Auvergne , :Bonne_de_Luxembourg ;
+        :fils       :Charles_V_le_Sage ;
+        :mere       :Jeanne_de_Bourgogne_v_1293-1349 ;
+        :nom        "Jean II le Bon" ;
+        :pere       :Philippe_VI_de_France .
+
+:Berthe_de_Bourgogne  a  :Femme , :Reine ;
+        :datedeces  "1010-01-16+02:00"^^xsd:date ;
+        :dynastie   :Welfs ;
+        :epoux      :Robert_II_le_Pieux , :Eudes_Ier_de_Blois ;
+        :nom        "Berthe de Bourgogne" .
+
+:Henri_IV_roi_de_France
+        a           :Homme , :Roi ;
+        :datedeces  "1610-05-14+02:00"^^xsd:date ;
+        :datenaiss  "1553-12-13+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Bourbon ;
+        :enfant     :Elisabeth_de_France_1602-1644 , :Nicolas_de_France , :Henriette_de_France_1609-1669 , :Christine_de_France , :Gaston_de_France ;
+        :epouse     :Marie_de_Médicis , :Marguerite_de_France_1553-1615 ;
+        :fils       :Louis_XIII_de_France ;
+        :nom        "Henri IV roi de France" ;
+        :parent     :Antoine_de_Bourbon , :Jeanne_d_Albret .
+
+:Henri_II_roi_de_France
+        a           :Homme , :Roi ;
+        :datedeces  "1559-07-10+02:00"^^xsd:date ;
+        :datenaiss  "1519-03-31+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Valois ;
+        :enfant     :Victoire_de_France_1556-1556 , :Jeanne_de_France_1556-1556 , :Claude_de_France_1547-1575 , :Louis_de_France_1549-1550 , :Elisabeth_de_France_1545-1568 , :François_de_France_1555-1584 ;
+        :epouse     :Catherine_de_Médicis ;
+        :fille      :Marguerite_de_France_1553-1615 ;
+        :fils       :Charles_IX_de_France , :Henri_III_de_France , :François_II_de_France ;
+        :mere       :Claude_de_France_1499-1524 ;
+        :nom        "Henri II roi de France" ;
+        :pere       :François_Ier_roi_de_France .
+
+:Philippe_de_Bourgogne_1323-1346
+        a        :Roi , :Homme ;
+        :epouse  :Jeanne_Ire_d_Auvergne ;
+        :nom     "Philippe de Bourgogne 1323-1346" .
+
+:Jeanne_de_France_1556-1556
+        a       :Personne ;
+        :mere   :Catherine_de_Médicis ;
+        :nom    "Jeanne de France 1556-1556" ;
+        :pere   :Henri_II_roi_de_France .
+
+:Carloman_Ier  a  :Personne ;
+        :mere   :Bertrade_de_Laon ;
+        :nom    "Carloman Ier" .
+
+:Marie-Amélie_de_Bourbon-Siciles
+        a           :Femme , :Reine , :Princesse ;
+        :datedeces  "1866-03-24+02:00"^^xsd:date ;
+        :datenaiss  "1782-04-26+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Bourbon-Siciles ;
+        :epoux      :Louis-Philippe_Ier ;
+        :fille      :Marie-Amélie_de_Bourbon-Siciles ;
+        :mere       :Marie-Amélie_de_Bourbon-Siciles ;
+        :nom        "Marie-Amélie de Bourbon-Siciles" .
+
+:Hedwige_de_France  a  :Personne ;
+        :mere   :Adélaïde_d_Aquitaine ;
+        :nom    "Hedwige de France" .
+
+:Charlotte_de_Savoie  a  :Femme , :Reine ;
+        :datedeces  "1483-12-01+02:00"^^xsd:date ;
+        :datenaiss  "1441-11-11+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Savoie ;
+        :enfant     :Anne_de_France ;
+        :epoux      :Louis_XI ;
+        :fille      :Jeanne_de_France_1464-1505 ;
+        :fils       :Charles_VIII_de_France ;
+        :nom        "Charlotte de Savoie" .
+
+:Marie_d_Angleterre_1496-1533
+        a           :Reine , :Femme ;
+        :datedeces  "1533-06-25+02:00"^^xsd:date ;
+        :datenaiss  "1496-03-18+02:00"^^xsd:date ;
+        :dynastie   :Maison_Tudor ;
+        :enfant     :Frances_Brandon ;
+        :epoux      :Louis_XII_de_France , :Charles_Brandon , :Louis_XII ;
+        :nom        "Marie d Angleterre 1496-1533" .
+
+:Philippe_Hurepel_de_Clermont
+        a       :Personne ;
+        :nom    "Philippe Hurepel de Clermont" ;
+        :pere   :Philippe_II_de_France .
+
+:Henriette_de_France_1609-1669
+        a       :Personne ;
+        :mere   :Marie_de_Médicis ;
+        :nom    "Henriette de France 1609-1669" ;
+        :pere   :Henri_IV_roi_de_France .
+
+:Louis_XIII_de_France
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Anne_d_Autriche_1601-1666 ;
+        :mere    :Marie_de_Médicis ;
+        :nom     "Louis XIII de France" ;
+        :pere    :Henri_IV_roi_de_France .
+
+:Eadbald  a     :Personne ;
+        :mere   :Haldetrude ;
+        :nom    "Eadbald" .
+
+:Adèle_de_France_1009-1079
+        a       :Personne ;
+        :mere   :Constance_d_Arles ;
+        :nom    "Adèle de France 1009-1079" ;
+        :pere   :Robert_II_le_Pieux .
+
+:Victoire_de_France_1556-1556
+        a       :Personne ;
+        :mere   :Catherine_de_Médicis ;
+        :nom    "Victoire de France 1556-1556" ;
+        :pere   :Henri_II_roi_de_France .
+
+:Jean_Ier_de_France  a  :Personne ;
+        :mere   :Clémence_de_Hongrie ;
+        :nom    "Jean Ier de France" ;
+        :pere   :Louis_X .
+
+:Clovis_Ier  a   :Roi , :Homme ;
+        :epouse  :Clotilde_femme_de_Clovis ;
+        :nom     "Clovis Ier" .
+
+:Louis_de_France_1661-1711
+        a       :Personne ;
+        :mere   :Marie-Thérèse_d_Autriche_1638-1683 ;
+        :nom    "Louis de France 1661-1711" ;
+        :pere   :Louis_XIV .
+
+:Louise_de_Lorraine-Vaudémont
+        a           :Femme , :Reine ;
+        :datedeces  "1601-01-29+02:00"^^xsd:date ;
+        :datenaiss  "1553-04-30+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Lorraine ;
+        :epoux      :Henri_III_roi_de_France , :Henri_III_de_France ;
+        :nom        "Louise de Lorraine-Vaudémont" .
+
+:Henri_le_Jeune  a  :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Henri le Jeune" .
+
+:Duc_d_Orléans  a  :Personne ;
+        :mere   :Jeanne_de_Bourbon_1338-1378 ;
+        :nom    "Duc d Orléans" .
+
+:Guillaume_III_de_Toulouse
+        a       :Personne ;
+        :mere   :Adélaïde_d_Anjou ;
+        :nom    "Guillaume III de Toulouse" .
+
+:Louis_de_France_1397-1415
+        a       :Personne ;
+        :mere   :Isabeau_de_Bavière ;
+        :nom    "Louis de France 1397-1415" .
+
+:Charles_IX_roi_de_France
+        a           :Homme , :Roi ;
+        :datedeces  "1574-05-30+02:00"^^xsd:date ;
+        :datenaiss  "1550-06-27+02:00"^^xsd:date ;
+        :dynastie   :Dynastie_des_Valois ;
+        :enfant     :Charles_d_Angoulême_1573-1650 , :Marie-Élisabeth_de_France ;
+        :epouse     :Elisabeth_d_Autriche_1554-1592 ;
+        :mere       :Catherine_de_Médicis ;
+        :nom        "Charles IX roi de France" ;
+        :pere       :Henri_II_de_France .
+
+:Jean_II_de_France  a  :Roi , :Homme , :Prince ;
+        :epouse  :Jeanne_Ire_d_Auvergne ;
+        :mere    :Jeanne_de_Bourgogne_v_1293-1349 ;
+        :nom     "Jean II de France" .
+
+:Bonne_de_Luxembourg  a  :Reine , :Femme ;
+        :epoux  :Jean_II_le_Bon ;
+        :nom    "Bonne de Luxembourg" .
+
+:François_II_roi_de_France
+        a           :Roi , :Homme ;
+        :datedeces  "1560-12-05+02:00"^^xsd:date ;
+        :datenaiss  "1544-01-19+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Valois ;
+        :epouse     :Marie_Stuart_reine_d_Ecosse ;
+        :mere       :Catherine_de_Médicis ;
+        :nom        "François II roi de France" ;
+        :pere       :Henri_II_de_France .
+
+:Marie_de_Portugal_1521-1577
+        a       :Personne ;
+        :mere   :Éléonore_de_Habsbourg ;
+        :nom    "Marie de Portugal 1521-1577" .
+
+:Jean_Tristan_de_France
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Jean Tristan de France" ;
+        :pere   :Louis_IX_de_France .
+
+:Marguerite_d_Ecosse_1424-1445
+        a       :Reine , :Femme ;
+        :epoux  :Louis_XI ;
+        :nom    "Marguerite d Ecosse 1424-1445" .
+
+:Blanche_de_France_1240-1243
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Blanche de France 1240-1243" ;
+        :pere   :Louis_IX_de_France .
+
+:Charlemagne  a  :Roi , :Homme , :Prince ;
+        :epouse  :Hildegarde_de_Vintzgau ;
+        :mere    :Bertrade_de_Laon ;
+        :nom     "Charlemagne" .
+
+:Constance_d_Arles  a  :Reine , :Princesse , :Femme ;
+        :datedeces  "1032-07-25+02:00"^^xsd:date ;
+        :enfant     :Robert_Ier_de_Bourgogne , :Alix_de_France_1003-ap_1063 , :Adèle_de_France_1009-1079 , :Hugues_de_France_1007-1025 ;
+        :epoux      :Robert_II_le_Pieux ;
+        :fils       :Henri_Ier_roi_des_Francs ;
+        :mere       :Adélaïde_d_Anjou ;
+        :nom        "Constance d Arles" ;
+        :pere       :Robert_II_le_Pieux .
+
+:Robert_Ier_de_Bourgogne
+        a       :Personne ;
+        :mere   :Constance_d_Arles ;
+        :nom    "Robert Ier de Bourgogne" ;
+        :pere   :Robert_II_le_Pieux .
+
+:Claude_de_France_1499-1524
+        a           :Femme , :Princesse , :Reine ;
+        :datedeces  "1524-07-20+02:00"^^xsd:date ;
+        :datenaiss  "1499-10-13+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Valois ;
+        :enfant     :Charles_II_d_Orléans_1522-1545 , :Marguerite_de_France_1523-1574 , :Madeleine_de_France_1520-1537 , :François_III_de_Bretagne , :Charlotte_de_France_1516-1524 , :Louise_de_France_1515-1518 ;
+        :epoux      :François_Ier_roi_de_France  ;
+        :fils       :Henri_II_de_France ;
+        :mere       :Anne_de_Bretagne ;
+        :nom        "Claude de France 1499-1524" ;
+        :pere       :Louis_XII , :Louis_XII_de_France .
+
+:Henri_II_de_France  a  :Roi , :Homme , :Prince ;
+        :epouse  :Catherine_de_Médicis ;
+        :mere    :Claude_de_France_1499-1524 ;
+        :nom     "Henri II de France" ;
+        :pere    :François_Ier_roi_de_France .
+
+:Louis_de_France_1729-1765
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Louis de France 1729-1765" ;
+        :pere   :Louis_XV .
+
+:Philippe_III_de_France
+        a        :Prince , :Homme , :Roi ;
+        :epouse  :Marie_de_Brabant_1254-1321 , :Isabelle_d_Aragon_1247-1271 ;
+        :mere    :Marguerite_de_Provence ;
+        :nom     "Philippe III de France" ;
+        :pere    :Louis_IX_de_France .
+
+:Louis_VIII_de_France  a  :Homme , :Roi ;
+        :datedeces  "1226-11-08+02:00"^^xsd:date ;
+        :datenaiss  "1187-09-05+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Robert_Ier_d_Artois , :Isabelle_de_France_1225-1270 , :Charles_Ier_de_Sicile , :Alphonse_de_France ;
+        :epouse     :Blanche_de_Castille ;
+        :fils       :Louis_IX_de_France ;
+        :mere       :Isabelle_de_Hainaut ;
+        :nom        "Louis VIII le Lion" ;
+        :pere       :Philippe_II_de_France .
+
+:Philippe_V_de_France
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Jeanne_II_de_Bourgogne ;
+        :mere    :Jeanne_Ire_de_Navarre ;
+        :nom     "Philippe V de France" ;
+        :pere    :Philippe_IV_le_Bel .
+
+:Louis_de_France_1775-1844
+        a       :Personne ;
+        :nom    "Louis de France 1775-1844" ;
+        :pere   :Charles_X_roi_de_France .
+
+:Isabelle_de_Hainaut  a  :Reine , :Femme ;
+        :datedeces  "1190-03-15+02:00"^^xsd:date ;
+        :datenaiss  "1170-04-23+02:00"^^xsd:date ;
+        :enfant     :Louis_VIII_de_France ;
+        :epoux      :Philippe_II_de_France , :Philippe_II_de_France ;
+        :nom        "Isabelle de Hainaut" .
+
+:Philippe_II_de_France
+        a        :Homme , :Roi , :Prince ;
+        :epouse  :Isabelle_de_Hainaut , :Agnès_de_Méranie ;
+        :mere    :Adèle_de_Champagne ;
+        :nom     "Philippe II de France" .
+
+:Robert_II_le_Pieux  a  :Roi , :Homme ;
+        :datedeces  "1031-07-20+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Alix_de_France_1003-ap_1063 , :Hugues_de_France_1007-1025 , :Robert_Ier_de_Bourgogne , :Eudes_Ier_de_France , :Adèle_de_France_1009-1079 ;
+        :epouse     :Rozala_d_Italie , :Berthe_de_Bourgogne , :Constance_d_Arles ;
+        :fille      :Constance_d_Arles ;
+        :fils       :Henri_Ier_roi_des_Francs ;
+        :mere       :Adélaïde_d_Aquitaine ;
+        :nom        "Robert II le Pieux" ;
+        :pere       :Hugues_Capet .
+
+:Jeanne_Ire_d_Auvergne
+        a       :Reine , :Femme ;
+        :epoux  :Jean_II_le_Bon ;
+        :nom    "Jeanne Ire comtesse d Auvergne" .
+
+:Philippe_V_le_Long  a  :Homme , :Roi ;
+        :datedeces  "1322-01-03+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Jeanne_de_France_1308-1347 , :Marguerite_de_France_1310-1382 , :Blanche_de_France_1313-1358 , :Isabelle_de_France_1312-1348 ;
+        :epouse     :Jeanne_de_Bourgogne_v_1291-1330 ;
+        :mere       :Jeanne_Ire_de_Navarre ;
+        :nom        "Philippe V le Long" ;
+        :pere       :Philippe_IV_le_Bel .
+
+:François_Ier_roi_de_France
+        a           :Homme , :Roi ;
+        :datedeces  "1547-03-31+02:00"^^xsd:date ;
+        :datenaiss  "1494-09-12+02:00"^^xsd:date ;
+        :dynastie   :Dynastie_des_Valois ;
+        :enfant     :Marguerite_de_France_1523-1574 , :Louise_de_France_1515-1518 , :François_III_de_Bretagne , :Charles_II_d_Orléans_1522_-_1545 , :Madeleine_de_France_1520-1537 , :Nicolas_d_Estouteville ;
+        :epouse     :Éléonore_de_Habsbourg , :Claude_de_France_1499-1524 ;
+        :fils       :Henri_II_de_France ;
+        :nom        "François Ier roi de France" ;
+        :parent     :Charles_d_Orléans_1459-1496 , :Louise_de_Savoie .
+
+:Catherine_de_Valois_1401-1437
+        a       :Personne ;
+        :mere   :Isabeau_de_Bavière ;
+        :nom    "Catherine de Valois 1401-1437" .
+
+:Louis_VI_de_France  a  :Roi , :Homme , :Prince ;
+        :epouse  :Adélaïde_de_Savoie ;
+        :mere    :Berthe_de_Hollande ;
+        :nom     "Louis VI de France" ;
+        :pere    :Philippe_Ier_roi_des_Francs .
+
+:Jean_de_Berry  a  :Personne ;
+        :nom    "Jean de Berry" ;
+        :pere   :Jean_II_le_Bon .
+
+:Marie_Stuart_reine_d_Ecosse  a  :Reine , :Femme ;
+        :epoux  :François_II_roi_de_France ;
+        :nom    "Marie Ire d Ecosse" .
+
+:Adélaïde_de_France_1732-1800
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Adélaïde de France 1732-1800" ;
+        :pere   :Louis_XV .
+
+:Théodérade  a  :Reine , :Femme ;
+        :epoux  :Eudes_de_France ;
+        :nom    "Théodérade" .
+
+:Blanche_de_France_1313-1358
+        a       :Personne ;
+        :mere   :Jeanne_II_de_Bourgogne ;
+        :nom    "Blanche de France 1313-1358" ;
+        :pere   :Philippe_V_le_Long .
+
+:Louis_IX_de_France  a  :Roi , :Homme , :Prince ;
+        :epouse  :Marguerite_de_Provence ;
+        :nom     "Louis IX de France" ;
+        :pere    :Louis_VIII_de_France .
+
+:Raymond_V_de_Toulouse
+        a        :Roi , :Homme ;
+        :epouse  :Adélaïde_d_Anjou ;
+        :nom     "Raymond V de Toulouse" .
+
+:Michelle_de_France  a  :Personne ;
+        :mere   :Isabeau_de_Bavière ;
+        :nom    "Michelle de France" .
+
+:Charles_II_d_Orléans_1522_-_1545
+        a       :Personne ;
+        :nom    "Charles II d Orléans 1522 - 1545" ;
+        :pere   :François_Ier_roi_de_France .
+
+:Marie-Joséphine_de_Savoie
+        a       :Reine , :Femme ;
+        :epoux  :Louis_XVIII ;
+        :nom    "Marie-Joséphine de Savoie" .
+
+:Clotilde_femme_de_Clovis
+        a          :Reine , :Femme ;
+        :dynastie  :Burgondes ;
+        :enfant    :Ingomer , :Clodomir , :Clotaire_Ier , <http://www.asws.com/rois#Clotilde_%3F-531> , :Childebert_Ier ;
+        :epoux     :Clovis_Ier ;
+        :nom       "Clotilde femme de Clovis" .
+
+:Marie_de_France_1344-1404
+        a       :Personne ;
+        :nom    "Marie de France 1344-1404" ;
+        :pere   :Jean_II_le_Bon .
+
+:Adélaïde_d_Aquitaine
+        a          :Femme , :Reine ;
+        :dynastie  :Ramnulfides ;
+        :enfant    :Gisèle_de_France , :Hedwige_de_France ;
+        :epoux     :Hugues_Capet ;
+        :fils      :Robert_II_le_Pieux ;
+        :nom       "Adélaïde d Aquitaine" .
+
+:Anne_de_France  a  :Personne ;
+        :mere   :Charlotte_de_Savoie ;
+        :nom    "Anne de France" ;
+        :pere   :Louis_XI , :Charles_VIII_roi_de_France .
+
+:Henri_III_roi_de_France
+        a           :Roi , :Homme ;
+        :datedeces  "1589-08-02+02:00"^^xsd:date ;
+        :datenaiss  "1551-09-19+02:00"^^xsd:date ;
+        :dynastie   :Dynastie_des_Valois ;
+        :epouse     :Louise_de_Lorraine-Vaudémont ;
+        :mere       :Catherine_de_Médicis ;
+        :nom        "Henri III roi de France" ;
+        :pere       :Henri_II_de_France .
+
+:Marguerite_de_France_1158-1197
+        a       :Personne ;
+        :mere   :Constance_de_Castille_v_1136-1160 ;
+        :nom    "Marguerite de France 1158-1197" .
+
+:Louis_XV  a        :Roi , :Homme ;
+        :datedeces  "1774-05-10+02:00"^^xsd:date ;
+        :datenaiss  "1710-02-15+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Bourbon ;
+        :enfant     :Louise_de_France , :Adélaïde_de_France_1732-1800 , :Elisabeth_de_France_1727-1759 , :Philippe_V_d_Espagne , :Marie-Louise_de_France , :Thérèse_de_France_1736-1744 , :Sophie_de_France_1734-1782 , :Victoire_de_France_1733-1799 , :Louis_de_France_1729-1765 , :Henriette_de_France_1727-1752 ;
+        :epouse     :Marie_Leszczynska ;
+        :nom        "Louis XV" ;
+        :parent     :Marie-Adélaïde_de_Savoie , :Louis_de_France_1682-1712 .
+
+:Philippe_II_de_France  a  :Roi , :Homme ;
+        :datedeces  "1223-07-14+02:00"^^xsd:date ;
+        :datenaiss  "1165-08-21+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Philippe_Hurepel_de_Clermont , :Pierre_Charlot , :Marie_de_France_v_1198-1224 , :Louis_VIII_de_France ;
+        :epouse     :Agnès_de_Méranie , :Isabelle_de_Hainaut , :Ingeburge_de_Danemark ;
+        :mere       :Adèle_de_Champagne ;
+        :nom        "Philippe II Auguste" ;
+        :pere       :Louis_VII_de_France .
+
+:François_Ier_roi_de_France
+        a        :Roi , :Homme ;
+        :epouse  :Éléonore_de_Habsbourg , :Claude_de_France_1499-1524 ;
+        :nom     "François Ier de France" .
+
+:Louis_XVI_de_France  a  :Roi , :Homme ;
+        :epouse  :Marie-Antoinette_d_Autriche ;
+        :nom     "Louis XVI de France" .
+
+:Blanche_de_France_1253-1320
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Blanche de France 1253-1320" ;
+        :pere   :Louis_IX_de_France .
+
+:Clotaire_II  a  :Roi , :Homme ;
+        :epouse  :Haldetrude ;
+        :nom     "Clotaire II" .
+
+:Charles_Brandon  a  :Roi , :Homme ;
+        :epouse  :Marie_d_Angleterre_1496-1533 ;
+        :nom     "Charles Brandon" .
+
+:Charles-Orland_de_France
+        a       :Personne ;
+        :mere   :Anne_de_Bretagne ;
+        :nom    "Charles-Orland de France" ;
+        :pere   :Charles_VIII_roi_de_France .
+
+:Henriette_de_France_1727-1752
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Henriette de France 1727-1752" ;
+        :pere   :Louis_XV .
+
+:Pierre_Charlot  a  :Personne ;
+        :nom    "Pierre Charlot" ;
+        :pere   :Philippe_II_de_France .
+
+:Marie_d_Orléans_1813-1839
+        a       :Personne ;
+        :nom    "Marie d Orléans 1813-1839" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Jeanne_de_Bourgogne_v_1293-1349
+        a           :Reine , :Femme ;
+        :datedeces  "1349-12-12+02:00"^^xsd:date ;
+        :dynastie   :Première_maison_capétienne_de_Bourgogne ;
+        :enfant     :Philippe_de_France_1336-1375 ;
+        :epoux      :Philippe_VI_de_France ;
+        :fils       :Jean_II_de_France ;
+        :nom        "Jeanne de Bourgogne v. 1293-1349" .
+
+:Adèle_de_Champagne  a  :Reine , :Femme ;
+        :datedeces  "1206-06-04+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Blois ;
+        :enfant     :Agnès_de_France_1171-1240 ;
+        :epoux      :Louis_VII_de_France ;
+        :fils       :Philippe_II_de_France ;
+        :nom        "Adèle de Champagne" ;
+        :parent     :Thibaut_IV_de_Blois , :Mathilde_de_Carinthie .
+
+:Henri_II_d_Angleterre
+        a        :Roi , :Homme ;
+        :epouse  :Aliénor_d_Aquitaine ;
+        :nom     "Henri II d Angleterre" .
+
+:Edwige_de_Wessex  a  :Reine , :Femme , :Princesse ;
+        :epoux  :Charles_III_le_Simple ;
+        :nom    "Edwige de Wessex" ;
+        :pere   :Charles_III_le_Simple .
+
+:Henri_d_Orléans_1822-1897
+        a       :Personne ;
+        :nom    "Henri d Orléans 1822-1897" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Hugues_Ier_de_Vermandois
+        a       :Personne ;
+        :mere   :Anne_de_Kiev ;
+        :nom    "Hugues Ier de Vermandois" ;
+        :pere   :Henri_Ier_roi_des_Francs .
+
+:Maximilien_Ier_du_Saint-Empire
+        a        :Roi , :Homme ;
+        :epouse  :Anne_de_Bretagne ;
+        :nom     "Maximilien Ier du Saint-Empire" .
+
+:Agnès_de_Méranie  a  :Reine , :Femme ;
+        :datedeces  "1201-07-19+02:00"^^xsd:date ;
+        :enfant     :Marie_de_France_v_1198-1224 , :Philippe_Hurepel_de_France ;
+        :epoux      :Philippe_II_de_France , :Philippe_II_de_France ;
+        :nom        "Agnès de Méranie" .
+
+:Marie-Sophie-Béatrice_de_France
+        a       :Personne ;
+        :mere   :Marie-Antoinette_d_Autriche ;
+        :nom    "Marie-Sophie-Béatrice de France" ;
+        :pere   :Louis_XVI .
+
+:Blanche_de_Navarre_1333-1398
+        a           :Reine , :Femme ;
+        :datedeces  "1398-10-05+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_d_Evreux-Navarre ;
+        :enfant     :Jeanne_de_France_1351-1371 ;
+        :epoux      :Philippe_VI_de_France ;
+        :nom        "Blanche de Navarre 1333-1398" .
+
+:Clémentine_d_Orléans
+        a       :Personne ;
+        :nom    "Clémentine d Orléans" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Pierre_Ier_de_Courtenay
+        a       :Personne ;
+        :mere   :Adélaïde_de_Savoie ;
+        :nom    "Pierre Ier de Courtenay" .
+
+:Clovis_II  a    :Roi , :Homme , :Prince ;
+        :epouse  :Bathilde ;
+        :mere    :Nantilde ;
+        :nom     "Clovis II" .
+
+:Anne_de_Kiev  a   :Reine , :Femme ;
+        :dynastie  :Rus__de_Kiev ;
+        :enfant    :Hugues_Ier_de_Vermandois ;
+        :epoux     :Henri_Ier_roi_des_Francs , :Raoul_IV_de_Vexin  ;
+        :fils      :Philippe_Ier_roi_des_Francs ;
+        :nom       "Anne de Kiev" ;
+        :parent    :Iaroslav_le_Sage , :Ingigerd_de_Suède .
+
+:Louis_XIV a  :Roi , :Homme , :Prince ;
+        :epouse  :Marie-Thérèse_d_Autriche_1638-1683 ;
+        :mere    :Anne_d_Autriche_1601-1666 ;
+        :nom     "Louis XIV de France" ;
+        :pere    :Louis_XIII .
+
+:Elisabeth_de_France_1545-1568
+        a       :Personne ;
+        :mere   :Catherine_de_Médicis ;
+        :nom    "Elisabeth de France 1545-1568" ;
+        :pere   :Henri_II_roi_de_France .
+
+:Philippe_II_de_Bourgogne
+        a       :Personne ;
+        :nom    "Philippe II de Bourgogne" ;
+        :pere   :Jean_II_le_Bon .
+
+:Marguerite_de_France_1254-1271
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Marguerite de France 1254-1271" ;
+        :pere   :Louis_IX_de_France .
+
+:Robert_II_le_Pieux  a  :Roi , :Prince , :Homme ;
+        :epouse  :Constance_d_Arles , :Berthe_de_Bourgogne , :Rozala_d_Italie ;
+        :mere    :Adélaïde_d_Aquitaine ;
+        :nom     "Robert II de France" .
+
+:Isabelle_de_France_1225-1270
+        a       :Personne ;
+        :nom    "Isabelle de France 1225-1270" ;
+        :pere   :Louis_VIII_de_France .
+
+:Manuel_Ier_de_Portugal
+        a        :Roi , :Homme ;
+        :epouse  :Éléonore_de_Habsbourg ;
+        :nom     "Manuel Ier de Portugal" .
+
+:Henri_Ier_roi_des_Francs
+        a           :Roi , :Homme ;
+        :datedeces  "1060-08-04+02:00"^^xsd:date ;
+        :datenaiss  "1008-05-04+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Hugues_Ier_de_Vermandois ;
+        :epouse     :Mathilde_de_Frise , :Anne_de_Kiev ;
+        :fils       :Philippe_Ier_roi_des_Francs ;
+        :mere       :Constance_d_Arles ;
+        :nom        "Henri Ier roi des Francs" ;
+        :pere       :Robert_II_le_Pieux .
+
+:Isabelle_d_Aragon_1247-1271
+        a           :Reine , :Femme ;
+        :datedeces  "1271-01-28+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Barcelone ;
+        :enfant     :Charles_de_Valois_1270-1325 , :Louis_de_France_1264-1276 ;
+        :epoux      :Philippe_III_de_France ;
+        :fils       :Philippe_IV_le_Bel ;
+        :nom        "Isabelle d Aragon 1247-1271" .
+
+:Marie-Louise_de_France
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Marie-Louise de France" ;
+        :pere   :Louis_XV .
+
+:Louis-Philippe_Ier  a  :Roi , :Homme ;
+        :datedeces  "1850-08-26+02:00"^^xsd:date ;
+        :datenaiss  "1773-10-06+02:00"^^xsd:date ;
+        :dynastie   :Quatrième_maison_d_Orléans ;
+        :enfant     :François_d_Orléans_1818-1900 , :Clémentine_d_Orléans , :Louis_d_Orléans_1814-1896 , :Antoine_d_Orléans_1824-1890 , :Charles_d_Orléans_1820-1828 , :Marie_d_Orléans_1813-1839 , :Louise_d_Orléans_1812-1850 , :Henri_d_Orléans_1822-1897 , :Ferdinand-Philippe_d_Orléans ;
+        :epouse     :Marie-Amélie_de_Bourbon-Siciles ;
+        :nom        "Louis-Philippe Ier" ;
+        :parent     :Louis_Philippe_d_Orléans_1747-1793 , :Marie-Adélaïde_de_Bourbon .
+
+:Charles_II_d_Orléans_1522-1545
+        a       :Personne ;
+        :mere   :Claude_de_France_1499-1524 ;
+        :nom    "Charles II d Orléans 1522-1545" .
+
+:Jeanne_de_France_1351-1371
+        a       :Personne ;
+        :mere   :Blanche_de_Navarre_1333-1398 ;
+        :nom    "Jeanne de France 1351-1371" .
+
+:Baudouin_IV_de_Flandre
+        a       :Personne ;
+        :mere   :Rozala_d_Italie ;
+        :nom    "Baudouin IV de Flandre" .
+
+:Charles_V_le_Sage  a  :Roi , :Homme ;
+        :datedeces  "1338-01-21+02:00"^^xsd:date ;
+        :datenaiss  "1338-01-21+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Valois ;
+        :epouse     :Jeanne_de_Bourbon_1338-1378 ;
+        :mere       :Bonne_de_Luxembourg ;
+        :nom        "Charles V le Sage" ;
+        :pere       :Jean_II_de_France .
+
+:Jeanne_de_France_1343-1373
+        a       :Personne ;
+        :nom    "Jeanne de France 1343-1373" ;
+        :pere   :Jean_II_le_Bon .
+
+:Charles_de_France_1446-1472
+        a       :Personne ;
+        :mere   :Marie_d_Anjou ;
+        :nom    "Charles de France 1446-1472" .
+
+:Marie_de_France_1145-1198
+        a       :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Marie de France 1145-1198" .
+
+:Louis_XV  a  :Roi , :Homme ;
+        :epouse  :Marie_Leszczynska ;
+        :nom     "Louis XV de France" .
+
+:Étienne_de_Gévaudan  a  :Roi , :Homme ;
+        :epouse  :Adélaïde_d_Anjou ;
+        :nom     "Étienne de Gévaudan" .
+
+:Pépin_le_Bref  a  :Roi , :Homme ;
+        :epouse  :Bertrade_de_Laon ;
+        :nom     "Pépin le Bref" .
+
+:Eudes_Ier_de_France  a  :Personne ;
+        :nom    "Eudes Ier de France" ;
+        :pere   :Robert_II_le_Pieux .
+
+:Isabelle_de_France_1389-1409
+        a       :Personne ;
+        :mere   :Isabeau_de_Bavière ;
+        :nom    "Isabelle de France 1389-1409" .
+
+:Charles_X_roi_de_France
+        a           :Roi , :Homme ;
+        :datedeces  "1836-11-06+02:00"^^xsd:date ;
+        :datenaiss  "1757-10-09+02:00"^^xsd:date ;
+        :dynastie   :Bourbons_dynastie_française ;
+        :enfant     :Charles-Ferdinand_d_Artois , :Louis_de_France_1775-1844 ;
+        :epouse     :Marie-Thérèse_de_Savoie_1756-1805 ;
+        :nom        "Charles X roi de France" ;
+        :parent     :Louis_de_France_1729-1765 , :Marie-Josèphe_de_Saxe_1731-1767 .
+
+:Louis_XIV  a       :Homme , :Roi ;
+        :datedeces  "1715-09-01+02:00"^^xsd:date ;
+        :datenaiss  "1638-09-05+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Bourbon ;
+        :enfant     :Marie-Anne_de_France , :Philippe-Charles_de_France , :Marie-Thérèse_de_France_1667-1672 , :Louis_de_France_1661-1711 , :Louis-François_de_France , :Anne-Élisabeth_de_France ;
+        :epouse     :Madame_de_Maintenon , :Marie-Thérèse_d_Autriche_1638-1683 ;
+        :mere       :Anne_d_Autriche_1601-1666 ;
+        :nom        "Louis XIV" .
+
+:Charles_IV_de_France
+        a        :Roi , :Prince , :Homme ;
+        :epouse  :Blanche_de_Bourgogne_v_1296-1326 , :Jeanne_d_Evreux , :Marie_de_Luxembourg_1305-1324 ;
+        :mere    :Jeanne_Ire_de_Navarre ;
+        :nom     "Charles IV de France" ;
+        :pere    :Philippe_IV_le_Bel .
+
+:James_Hepburn  a  :Roi , :Homme ;
+        :epouse  :Marie_Stuart_reine_d_Ecosse ;
+        :nom     "James Hepburn" .
+
+:Anne-Élisabeth_de_France
+        a       :Personne ;
+        :mere   :Marie-Thérèse_d_Autriche_1638-1683 ;
+        :nom    "Anne-Élisabeth de France" ;
+        :pere   :Louis_XIV .
+
+:Raoul_de_France  a  :Roi , :Homme ;
+        :epouse  :Emma_de_France_894-934 ;
+        :nom     "Raoul de France" .
+
+:Victoire_de_France_1733-1799
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Victoire de France 1733-1799" ;
+        :pere   :Louis_XV .
+
+:Charles_d_Angoulême_1573-1650
+        a       :Personne ;
+        :nom    "Charles d Angoulême 1573-1650" ;
+        :pere   :Charles_IX_roi_de_France .
+
+:Marguerite_de_France_1553-1615
+        a           :Reine , :Princesse , :Femme ;
+        :datedeces  "1615-03-27+02:00"^^xsd:date ;
+        :datenaiss  "1553-05-14+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Valois ;
+        :epoux      :Henri_IV_roi_de_France , :Henri_IV_de_France ;
+        :mere       :Catherine_de_Médicis ;
+        :nom        "Marguerite de France 1553-1615" ;
+        :pere       :Henri_II_roi_de_France .
+
+:Marguerite_Ire_de_Bourgogne
+        a       :Personne ;
+        :mere   :Jeanne_II_de_Bourgogne ;
+        :nom    "Marguerite Ire de Bourgogne" .
+
+:Marguerite_de_France_1523-1574
+        a       :Personne ;
+        :mere   :Claude_de_France_1499-1524 ;
+        :nom    "Marguerite de France 1523-1574" ;
+        :pere   :François_Ier_roi_de_France .
+
+:Charles_V_le_Sage  a  :Roi , :Homme , :Prince ;
+        :epouse  :Jeanne_de_Bourbon_1338-1378 ;
+        :nom     "Charles V de France" ;
+        :pere    :Jean_II_le_Bon .
+
+:Constance_de_France_1078-1125
+        a       :Personne ;
+        :mere   :Berthe_de_Hollande ;
+        :nom    "Constance de France 1078-1125" ;
+        :pere   :Philippe_Ier_roi_des_Francs .
+
+:Gisèle_de_France  a  :Personne ;
+        :mere   :Adélaïde_d_Aquitaine ;
+        :nom    "Gisèle de France" .
+
+:Marie_d_Anjou  a   :Reine , :Femme ;
+        :datedeces  "1463-11-29+02:00"^^xsd:date ;
+        :datenaiss  "1404-10-14+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_d_Anjou-Sicile ;
+        :enfant     :Jeanne_de_France_1435-1482 , :Madeleine_de_France_1443-1495 , :Catherine_de_France_1428-1446 , :Charles_de_France_1446-1472 , :Yolande_de_France , :Radegonde_de_France ;
+        :epoux       :Charles_VII_roi_de_France ;
+        :fils       :Louis_XI ;
+        :nom        "Marie d Anjou" .
+
+:Bertrade_de_Montfort
+        a           :Reine , :Femme ;
+        :datedeces  "1117-02-14+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Montfort-l_Amaury ;
+        :enfant     :Foulque_V_d_Anjou , :Philippe_de_Mantes ;
+        :epoux      :Foulque_IV_d_Anjou ,  :Philippe_Ier_roi_des_Francs ;
+        :nom        "Bertrade de Montfort" .
+
+:Philippe_de_France_1125-1161
+        a       :Personne ;
+        :mere   :Adélaïde_de_Savoie ;
+        :nom    "Philippe de France 1125-1161" .
+
+:Charles_VIII_de_France
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Anne_de_Bretagne ;
+        :mere    :Charlotte_de_Savoie ;
+        :nom     "Charles VIII de France" ;
+        :pere    :Louis_XI .
+
+:Hugues_Capet  a  :Roi , :Homme ;
+        :epouse  :Adélaïde_d_Aquitaine ;
+        :nom     "Hugues Capet" .
+
+:Marie_de_Brabant_1254-1321
+        a           :Reine , :Femme ;
+        :datedeces  "1322-01-12+02:00"^^xsd:date ;
+        :datenaiss  "1254-05-23+02:00"^^xsd:date ;
+        :dynastie   :Famille_des_Régnier ;
+        :enfant     :Blanche_de_France_1282-1305 , :Marguerite_de_France_reine_d_Angleterre , :Louis_de_France_1276-1319 ;
+        :epoux      :Philippe_III_de_France ;
+        :nom        "Marie de Brabant 1254-1321" ;
+        :parent     :Adélaïde_de_Bourgogne_1233-1273 , :Henri_III_de_Brabant .
+
+:Jeanne_d_Angleterre_1165-1199
+        a       :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Jeanne d Angleterre 1165-1199" .
+
+:Hugues_de_France_1007-1025
+        a       :Personne ;
+        :mere   :Constance_d_Arles ;
+        :nom    "Hugues de France 1007-1025" ;
+        :pere   :Robert_II_le_Pieux .
+
+:Clotaire_III  a  :Personne ;
+        :mere   :Bathilde ;
+        :nom    "Clotaire III" .
+
+:Constance_de_France  a  :Personne ;
+        :mere   :Adélaïde_de_Savoie ;
+        :nom    "Constance de France" .
+
+:Anne_d_Autriche_1601-1666
+        a           :Femme , :Reine ;
+        :datedeces  "1666-01-20+02:00"^^xsd:date ;
+        :datenaiss  "1601-09-22+02:00"^^xsd:date ;
+        :dynastie   :Habsbourg ;
+        :enfant     :Philippe_de_France_1640-1701 ;
+        :epoux      :Louis_XIII_de_France , :Louis_XIII ;
+        :fils       :Louis_XIV ;
+        :nom        "Anne d Autriche 1601-1666" ;
+        :parent     :Marguerite_d_Autriche-Styrie , :Philippe_III_d_Espagne .
+
+:Jeanne_de_France_1464-1505
+        a           :Reine , :Femme , :Princesse ;
+        :datedeces  "1505-02-04+02:00"^^xsd:date ;
+        :datenaiss  "1464-04-23+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Valois ;
+        :epoux      :Louis_XII_de_France , :Louis_XII ;
+        :mere       :Charlotte_de_Savoie ;
+        :nom        "Jeanne de France 1464-1505" ;
+        :pere       :Louis_XI .
+
+:Agnès_de_France_1260-1325
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Agnès de France 1260-1325" ;
+        :pere   :Jean_II_le_Bon , :Louis_IX_de_France .
+
+:Blanche_de_Bourgogne_v_1296-1326
+        a           :Reine , :Femme ;
+        :datedeces  "1326-04-29+02:00"^^xsd:date ;
+        :dynastie   :Maison_d_Ivrée ;
+        :epoux      :Charles_IV_de_France ;
+        :nom        "Blanche de Bourgogne v. 1296-1326" .
+
+:Alix_de_France_1003-ap_1063
+        a       :Personne ;
+        :mere   :Constance_d_Arles ;
+        :nom    "Alix de France 1003-ap. 1063" ;
+        :pere   :Robert_II_le_Pieux .
+
+:Nicolas_de_France  a  :Personne ;
+        :nom    "Nicolas de France" ;
+        :pere   :Henri_IV_roi_de_France .
+
+:Louis_Ier_d_Orléans  a  :Personne ;
+        :mere   :Jeanne_de_Bourbon_1338-1378 ;
+        :nom    "Louis Ier d Orléans" .
+
+:François_II_de_France
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Marie_Stuart_reine_d_Ecosse ;
+        :mere    :Catherine_de_Médicis ;
+        :nom     "François II de France" ;
+        :pere    :Henri_II_roi_de_France .
+
+:Louis_XVIII  a     :Homme , :Roi ;
+        :datedeces  "1824-09-16+02:00"^^xsd:date ;
+        :datenaiss  "1755-11-17+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Bourbon ;
+        :epouse     :Marie-Joséphine_de_Savoie ;
+        :nom        "Louis XVIII" ;
+        :parent     :Louis_de_France_1729-1765 , :Marie-Josèphe_de_Saxe_1731-1767 .
+
+:Marguerite_de_France_1310-1382
+        a       :Personne ;
+        :nom    "Marguerite de France 1310-1382" ;
+        :pere   :Philippe_V_le_Long .
+
+:Marie-Thérèse_d_Autriche_1638-1683
+        a           :Femme , :Reine ;
+        :datedeces  "1683-07-30+02:00"^^xsd:date ;
+        :datenaiss  "1638-09-10+02:00"^^xsd:date ;
+        :dynastie   :Habsbourg ;
+        :enfant     :Marie-Thérèse_de_France_1667-1672 , :Anne-Élisabeth_de_France , :Louis_de_France_1661-1711 ;
+        :epoux      :Louis_XIV ;
+        :nom        "Marie-Thérèse d Autriche 1638-1683" ;
+        :parent     :Elisabeth_de_France_1602-1644 , :Philippe_IV_d_Espagne .
+
+:Louis_XIII  a      :Homme , :Roi ;
+        :datedeces  "1643-05-14+02:00"^^xsd:date ;
+        :datenaiss  "1601-09-27+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Bourbon ;
+        :enfant     :Philippe_d_Orléans_1640-1701 ;
+        :epouse     :Anne_d_Autriche_1601-1666 ;
+        :fils       :Louis_XIV ;
+        :mere       :Marie_de_Médicis ;
+        :nom        "Louis XIII" ;
+        :pere       :Henri_IV_de_France .
+
+:Henri_III_de_France  a  :Roi , :Homme , :Prince ;
+        :epouse  :Louise_de_Lorraine-Vaudémont ;
+        :mere    :Catherine_de_Médicis ;
+        :nom     "Henri III de France" ;
+        :pere    :Henri_II_roi_de_France .
+
+:Marie-Thérèse_de_Savoie_1756-1805
+        a       :Reine , :Femme ;
+        :epoux  :Charles_X_roi_de_France ;
+        :nom    "Marie-Thérèse de Savoie 1756-1805" .
+
+:Robert_de_Clermont  a  :Personne ;
+        :nom    "Robert de Clermont" ;
+        :pere   :Louis_IX_de_France .
+
+:Louis-François_de_France
+        a       :Personne ;
+        :nom    "Louis-François de France" ;
+        :pere   :Louis_XIV .
+
+:Jeanne_de_France_1435-1482
+        a       :Personne ;
+        :mere   :Marie_d_Anjou ;
+        :nom    "Jeanne de France 1435-1482" .
+
+:Marie-Thérèse_de_France_1667-1672
+        a       :Personne ;
+        :mere   :Marie-Thérèse_d_Autriche_1638-1683 ;
+        :nom    "Marie-Thérèse de France 1667-1672" ;
+        :pere   :Louis_XIV .
+
+:Eudes_de_France  a  :Roi , :Homme ;
+        :epouse  :Théodérade ;
+        :nom     "Eudes de France" .
+
+:Louis_de_France_1244-1260
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Louis de France 1244-1260" ;
+        :pere   :Louis_IX_de_France .
+
+:Philippe_de_France_1407-1407
+        a       :Personne ;
+        :mere   :Isabeau_de_Bavière ;
+        :nom    "Philippe de France 1407-1407" .
+
+:Jeanne_II_de_Navarre
+        a       :Personne ;
+        :mere   :Marguerite_de_Bourgogne_1290-1315 ;
+        :nom    "Jeanne II de Navarre" ;
+        :pere   :Louis_X .
+
+:Eudes_Ier_de_Blois  a  :Roi , :Homme ;
+        :epouse  :Berthe_de_Bourgogne ;
+        :nom     "Eudes Ier de Blois" .
+
+:Clotaire_Ier  a  :Personne ;
+        :mere   :Clotilde_femme_de_Clovis ;
+        :nom    "Clotaire Ier" .
+
+:Louis_XII_de_France  a  :Homme , :Roi ;
+        :epouse  :Anne_de_Bretagne , :Jeanne_de_France_1464-1505 , :Marie_d_Angleterre_1496-1533 ;
+        :nom     "Louis XII de France" .
+
+:Madeleine_de_France_1443-1495
+        a       :Personne ;
+        :mere   :Marie_d_Anjou ;
+        :nom    "Madeleine de France 1443-1495" .
+
+:Madame_de_Maintenon  a  :Reine , :Femme ;
+        :epoux  :Louis_XIV ;
+        :nom    "Madame de Maintenon" .
+
+:Philippe_Ier_roi_des_Francs
+        a        :Homme , :Roi , :Prince ;
+        :epouse  :Bertrade_de_Montfort , :Berthe_de_Hollande ;
+        :mere    :Anne_de_Kiev ;
+        :nom     "Philippe Ier de France" ;
+        :pere    :Henri_Ier_roi_des_Francs .
+
+:Isabelle_de_France_1242-1271
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Isabelle de France 1242-1271" ;
+        :pere   :Louis_IX_de_France .
+
+:Éléonore_de_Habsbourg
+        a           :Reine , :Femme ;
+        :datedeces  "1558-03-18+02:00"^^xsd:date ;
+        :datenaiss  "1498-11-15+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Habsbourg ;
+        :enfant     :Marie_de_Portugal_1521-1577 ;
+        :epoux      :François_Ier_roi_de_France , :Manuel_Ier_de_Portugal ;
+        :nom        "Éléonore de Habsbourg" .
+
+:Hildegarde_de_Vintzgau
+        a           :Reine , :Femme ;
+        :datedeces  "0783-04-30+02:00"^^xsd:date ;
+        :epoux      :Charlemagne ;
+        :nom        "Hildegarde de Vintzgau" .
+
+:Philippe_Hurepel_de_France
+        a       :Personne ;
+        :mere   :Agnès_de_Méranie ;
+        :nom    "Philippe Hurepel de France" .
+
+:Childebert_Ier  a  :Personne ;
+        :mere   :Clotilde_femme_de_Clovis ;
+        :nom    "Childebert Ier" .
+
+:Charles_VI_de_France
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Isabeau_de_Bavière ;
+        :mere    :Jeanne_de_Bourbon_1338-1378 ;
+        :nom     "Charles VI de France" .
+
+:Adélaïde_de_Savoie  a  :Femme , :Reine ;
+        :datedeces  "1154-11-18+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Savoie ;
+        :enfant     :Philippe_de_France_1116-1131 , :Pierre_Ier_de_Courtenay , :Constance_de_France , :Philippe_de_France_1125-1161 , :Robert_Ier_de_Dreux , :Henri_de_France_1121-1175 ;
+        :epoux      :Louis_VI_de_France ;
+        :fils       :Louis_VII_de_France ;
+        :nom        "Adélaïde de Savoie" .
+
+:Guillaume_II_de_Provence
+        a       :Personne ;
+        :mere   :Adélaïde_d_Anjou ;
+        :nom    "Guillaume II de Provence" .
+
+:Pierre_Ier_d_Alençon
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Pierre Ier d Alençon" ;
+        :pere   :Louis_IX_de_France .
+
+:Jeanne_de_Bourgogne_v_1291-1330
+        a       :Reine , :Femme ;
+        :epoux  :Philippe_V_le_Long ;
+        :nom    "Jeanne de Bourgogne v. 1291-1330" .
+
+:Charles_IX_de_France
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Elisabeth_d_Autriche_1554-1592 ;
+        :mere    :Catherine_de_Médicis ;
+        :nom     "Charles IX de France" ;
+        :pere    :Henri_II_roi_de_France .
+
+:Haldetrude  a   :Reine , :Femme ;
+        :enfant  :Eadbald ;
+        :epoux   :Clotaire_II ;
+        :nom     "Haldetrude" .
+
+:Guillaume_Ier_de_Provence
+        a        :Roi , :Homme ;
+        :epouse  :Adélaïde_d_Anjou ;
+        :nom     "Guillaume Ier de Provence" .
+
+:Berthe_de_Hollande  a  :Reine , :Femme ;
+        :datedeces  "1093-07-30+02:00"^^xsd:date ;
+        :dynastie   :Gerulfing ;
+        :enfant     :Constance_de_France_1078-1125 ;
+        :epoux      :Philippe_Ier_roi_des_Francs ;
+        :fils       :Louis_VI_de_France ;
+        :nom        "Berthe de Hollande" .
+
+:Jeanne_de_France_1391-1433
+        a       :Personne ;
+        :mere   :Isabeau_de_Bavière ;
+        :nom    "Jeanne de France 1391-1433" .
+
+:François_III_de_Bretagne
+        a       :Personne ;
+        :mere   :Claude_de_France_1499-1524 ;
+        :nom    "François III de Bretagne" ;
+        :pere   :François_Ier_roi_de_France .
+
+:Philippe_IV_le_Bel  a  :Homme , :Roi ;
+        :datedeces  "1314-11-29+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Isabelle_de_France_1292-1358 , :Marguerite_de_France_reine_d_Angleterre ;
+        :epouse     :Jeanne_Ire_de_Navarre ;
+        :fils       :Louis_X_de_France , :Philippe_V_de_France , :Charles_IV_de_France ;
+        :mere       :Isabelle_d_Aragon_1247-1271 ;
+        :nom        "Philippe IV le Bel" ;
+        :pere       :Philippe_III_de_France .
+
+:Isabeau_de_Bavière  a  :Femme , :Reine ;
+        :datedeces  "1435-09-24+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Wittelsbach ;
+        :enfant     :Catherine_de_Valois_1401-1437 , :Michelle_de_France , :Jean_de_France_1398-1417 , :Louis_de_France_1397-1415 , :Jeanne_de_France_1391-1433 , :Isabelle_de_France_1389-1409 , :Philippe_de_France_1407-1407 ;
+        :epoux      :Charles_VI_de_France ;
+        :fils       :Charles_VII_roi_de_France ;
+        :nom        "Isabeau de Bavière" ;
+        :parent     :Étienne_III_de_Bavière , :Taddea_Visconti .
+
+:Catherine_de_Médicis
+        a           :Femme , :Reine ;
+        :datedeces  "1589-01-05+02:00"^^xsd:date ;
+        :datenaiss  "1519-04-13+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Médicis ;
+        :enfant     :Claude_de_France_1547-1575 , :François_de_France_1555-1584 , :Elisabeth_de_France_1545-1568 , :Louis_de_France_1549-1550 , :Victoire_de_France_1556-1556 , :Jeanne_de_France_1556-1556 ;
+        :epoux      :Henri_II_de_France , :Henri_II_roi_de_France ;
+        :fille      :Marguerite_de_France_1553-1615 ;
+        :fils       :Charles_IX_de_France , :François_II_de_France , :Henri_III_de_France ;
+        :nom        "Catherine de Médicis" ;
+        :parent     :Madeleine_de_la_Tour_d_Auvergne , :Laurent_II_de_Médicis .
+
+:Louise_de_France  a  :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Louise de France" ;
+        :pere   :Louis_XV .
+
+:Philippe_de_Mantes  a  :Personne ;
+        :mere   :Bertrade_de_Montfort ;
+        :nom    "Philippe de Mantes" ;
+        :pere   :Philippe_Ier_roi_des_Francs .
+
+:Philippe-Charles_de_France
+        a       :Personne ;
+        :nom    "Philippe-Charles de France" ;
+        :pere   :Louis_XIV .
+
+:Philippe_VI_de_France
+        a        :Roi , :Homme ;
+        :epouse  :Jeanne_de_Bourgogne_v_1293-1349 , :Blanche_de_Navarre_1333-1398 ;
+        :nom     "Philippe VI de France" .
+
+:Sophie_de_France_1734-1782
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Sophie de France 1734-1782" ;
+        :pere   :Louis_XV .
+
+:Louis_XVI  a       :Homme , :Roi ;
+        :datedeces  "1793-01-21+02:00"^^xsd:date ;
+        :datenaiss  "1754-08-23+02:00"^^xsd:date ;
+        :dynastie   :Maison_capétienne_de_Bourbon ;
+        :enfant     :Marie-Thérèse_de_France_1778-1851 , :Louis_XVII , :Marie-Sophie-Béatrice_de_France , :Louis-Joseph_de_France ;
+        :epouse     :Marie-Antoinette_d_Autriche ;
+        :nom        "Louis XVI" ;
+        :parent     :Louis_de_France_1729-1765 , :Marie-Josèphe_de_Saxe_1731-1767 .
+
+:Ingomer  a     :Personne ;
+        :mere   :Clotilde_femme_de_Clovis ;
+        :nom    "Ingomer" .
+
+:Aliénor_d_Angleterre_1161-1214
+        a       :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Aliénor d Angleterre 1161-1214" .
+
+:Elisabeth_de_France_1602-1644
+        a       :Personne ;
+        :mere   :Marie_de_Médicis ;
+        :nom    "Elisabeth de France 1602-1644" ;
+        :pere   :Henri_IV_roi_de_France .
+
+:Raoul_IV_de_Vexin  a  :Roi , :Homme ;
+        :epouse  :Anne_de_Kiev ;
+        :nom     "Raoul IV de Vexin" .
+
+:Isabelle_de_France_1312-1348
+        a       :Personne ;
+        :mere   :Jeanne_II_de_Bourgogne ;
+        :nom    "Isabelle de France 1312-1348" ;
+        :pere   :Philippe_V_le_Long .
+
+:Marie-Thérèse_de_France_1778-1851
+        a       :Personne ;
+        :mere   :Marie-Antoinette_d_Autriche ;
+        :nom    "Marie-Thérèse de France 1778-1851" ;
+        :pere   :Louis_XVI .
+
+:Louis_IX_de_France  a        :Roi , :Homme ;
+        :datedeces  "1270-08-25+02:00"^^xsd:date ;
+        :datenaiss  "1214-04-25+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Isabelle_de_France_1242-1271 , :Agnès_de_France_1260-1325 , :Blanche_de_France_1240-1243 , :Pierre_Ier_d_Alençon , :Robert_de_Clermont , :Jean_Tristan_de_France , :Louis_de_France_1244-1260 , :Marguerite_de_France_1254-1271 , :Blanche_de_France_1253-1320 ;
+        :epouse     :Marguerite_de_Provence ;
+        :fils       :Philippe_III_de_France ;
+        :mere       :Blanche_de_Castille ;
+        :nom        "Louis IX" ;
+        :parent     :Louis_VIII_de_France .
+
+:Robert_de_Clermont_1256-1317
+        a       :Personne ;
+        :mere   :Marguerite_de_Provence ;
+        :nom    "Robert de Clermont 1256-1317" .
+
+:Constance_de_Castille_v_1136-1160
+        a           :Reine , :Femme ;
+        :datedeces  "1160-10-04+02:00"^^xsd:date ;
+        :dynastie   :Maison_d_Ivrée ;
+        :enfant     :Adèle_de_France_1160-1221 , :Marguerite_de_France_1158-1197 ;
+        :epoux      :Louis_VII_de_France ;
+        :nom        "Constance de Castille v. 1136-1160" ;
+        :parent     :Alphonse_VII_de_Castille , :Bérengère_de_Barcelone .
+
+:Philippe_V_d_Espagne
+        a       :Personne ;
+        :nom    "Philippe V d Espagne" ;
+        :pere   :Louis_XV .
+
+:Louis_d_Orléans_1814-1896
+        a       :Personne ;
+        :nom    "Louis d Orléans 1814-1896" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Elisabeth_d_Autriche_1554-1592
+        a           :Femme , :Reine ;
+        :datedeces  "1592-01-22+02:00"^^xsd:date ;
+        :datenaiss  "1554-07-05+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Habsbourg ;
+        :enfant     :Marie-Élisabeth_de_France ;
+        :epoux      :Charles_IX_de_France , :Charles_IX_roi_de_France ;
+        :nom        "Elisabeth d Autriche 1554-1592" .
+
+:Agnès_de_France_1171-1240
+        a       :Personne ;
+        :mere   :Adèle_de_Champagne ;
+        :nom    "Agnès de France 1171-1240" .
+
+:Renée_de_France  a  :Personne ;
+        :mere   :Anne_de_Bretagne ;
+        :nom    "Renée de France" ;
+        :pere   :Louis_XII .
+
+:Henri_IV_de_France  a  :Roi , :Homme ;
+        :epouse  :Marguerite_de_France_1553-1615 , :Marie_de_Médicis ;
+        :nom     "Henri IV de France" .
+
+:Robert_Ier_de_Dreux  a  :Personne ;
+        :mere   :Adélaïde_de_Savoie ;
+        :nom    "Robert Ier de Dreux" .
+
+:Thérèse_de_France_1736-1744
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Thérèse de France 1736-1744" ;
+        :pere   :Louis_XV .
+
+:Marguerite_de_Provence
+        a           :Reine , :Femme ;
+        :datedeces  "1295-12-20+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Barcelone ;
+        :enfant     :Marguerite_de_France_1254-1271 , :Isabelle_de_France_1242-1271 , :Louis_de_France_1244-1260 , :Blanche_de_France_1240-1243 , :Jean_Tristan_de_France , :Blanche_de_France_1253-1320 , :Robert_de_Clermont_1256-1317 , :Pierre_Ier_d_Alençon , :Agnès_de_France_1260-1325 ;
+        :epoux      :Louis_IX_de_France ;
+        :fils       :Philippe_III_de_France ;
+        :nom        "Marguerite de Provence" .
+
+:Blanche_de_France_1328-1394
+        a       :Personne ;
+        :mere   :Jeanne_d_Evreux ;
+        :nom    "Blanche de France 1328-1394" .
+
+:Charles_Ier_de_Sicile
+        a       :Personne ;
+        :nom    "Charles Ier de Sicile" ;
+        :pere   :Louis_VIII_de_France .
+
+:Frances_Brandon  a  :Personne ;
+        :mere   :Marie_d_Angleterre_1496-1533 ;
+        :nom    "Frances Brandon" .
+
+:Jeanne_Ire_de_Navarre
+        a           :Reine , :Femme ;
+        :datedeces  "1305-04-02+02:00"^^xsd:date ;
+        :datenaiss  "1273-01-14+02:00"^^xsd:date ;
+        :dynastie   :Liste_des_comtes_de_Champagne ;
+        :enfant     :Isabelle_de_France_1292-1358 ;
+        :epoux      :Philippe_IV_le_Bel  ;
+        :fils       :Charles_IV_de_France , :Louis_X_de_France , :Philippe_V_de_France ;
+        :nom        "Jeanne Ire de Navarre" ;
+        :parent     :Henri_Ier_de_Navarre , :Blanche_d_Artois .
+
+:Marie_de_France_v_1198-1224
+        a       :Personne ;
+        :mere   :Agnès_de_Méranie ;
+        :nom    "Marie de France v. 1198-1224" ;
+        :pere   :Philippe_II_de_France .
+
+:Philippe_IV_le_Bel
+        a        :Roi , :Homme , :Prince ;
+        :epouse  :Jeanne_Ire_de_Navarre ;
+        :mere    :Isabelle_d_Aragon_1247-1271 ;
+        :nom     "Philippe IV de France" .
+
+:Bathilde  a        :Reine , :Femme ;
+        :datedeces  "0680-01-30+02:00"^^xsd:date ;
+        :dynastie   :Mérovingiens ;
+        :enfant     :Childéric_II , :Clotaire_III ;
+        :epoux      :Clovis_II ;
+        :nom        "Bathilde" .
+
+:Rozala_d_Italie  a  :Femme , :Reine ;
+        :datedeces  "1003-02-07+02:00"^^xsd:date ;
+        :dynastie   :Maison_d_Ivrée ;
+        :enfant     :Baudouin_IV_de_Flandre ;
+        :epoux      :Robert_II_le_Pieux , :Arnoul_II_de_Flandre , :Robert_II_de_France ;
+        :nom        "Rozala d Italie" .
+
+:Louise_d_Orléans_1812-1850
+        a       :Personne ;
+        :nom    "Louise d Orléans 1812-1850" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Jeanne_de_Bourbon_1338-1378
+        a       :Reine , :Femme ;
+        :epoux  :Charles_V_le_Sage ;
+        :nom    "Jeanne de Bourbon 1337-1378" .
+
+:Charlotte_de_France_1516-1524
+        a       :Personne ;
+        :mere   :Claude_de_France_1499-1524 ;
+        :nom    "Charlotte de France 1516-1524" .
+
+:Clodomir  a    :Personne ;
+        :mere   :Clotilde_femme_de_Clovis ;
+        :nom    "Clodomir" .
+
+:Louis-Joseph_de_France
+        a       :Personne ;
+        :nom    "Louis-Joseph de France" ;
+        :pere   :Louis_XVI .
+
+:Louis_X_de_France  a         :Roi , :Homme ;
+        :datedeces  "1316-06-05+02:00"^^xsd:date ;
+        :datenaiss  "1289-10-04+02:00"^^xsd:date ;
+        :dynastie   :Capétiens ;
+        :enfant     :Jeanne_II_de_Navarre , :Jean_Ier_de_France ;
+        :epouse     :Clémence_de_Hongrie , :Marguerite_de_Bourgogne_1290-1315 ;
+        :mere       :Jeanne_Ire_de_Navarre ;
+        :nom        "Louis X" ;
+        :pere       :Philippe_IV_le_Bel .
+
+:Richard_Ier_d_Angleterre
+        a       :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Richard Ier d Angleterre" .
+
+:Marie_de_Médicis  a  :Femme , :Reine ;
+        :datedeces  "1642-07-03+02:00"^^xsd:date ;
+        :datenaiss  "1575-04-26+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Médicis ;
+        :enfant     :Gaston_de_France , :Elisabeth_de_France_1602-1644 , :Christine_de_France , :Monsieur_d_Orléans_1607-1611 , :Henriette_de_France_1609-1669 ;
+        :epoux      :Henri_IV_de_France , :Henri_IV_roi_de_France ;
+        :fils       :Louis_XIII_de_France ;
+        :nom        "Marie de Médicis" ;
+        :parent     :François_Ier_de_Médicis , :Jeanne_d_Autriche .
+
+:Childéric_II  a  :Personne ;
+        :mere   :Bathilde ;
+        :nom    "Childéric II" .
+
+:Charles_VIII_roi_de_France
+        a           :Roi , :Homme ;
+        :datedeces  "1498-04-07+02:00"^^xsd:date ;
+        :datenaiss  "1470-06-30+02:00"^^xsd:date ;
+        :dynastie   :Dynastie_des_Valois ;
+        :enfant     :Charles-Orland_de_France , :Charles_de_France_1496 , :Anne_de_France ;
+        :epouse     :Anne_de_Bretagne ;
+        :mere       :Charlotte_de_Savoie ;
+        :nom        "Charles VIII roi de France" ;
+        :pere       :Louis_XI .
+
+:Louis-Joseph_de_France_1781-1789
+        a       :Personne ;
+        :mere   :Marie-Antoinette_d_Autriche ;
+        :nom    "Louis-Joseph de France 1781-1789" .
+
+:Nantilde  a       :Reine , :Femme ;
+        :dynastie  :Mérovingien ;
+        :epoux     :Dagobert_Ier ;
+        :fils      :Clovis_II ;
+        :nom       "Nantilde" .
+
+:Louis_de_France_1264-1276
+        a       :Personne ;
+        :mere   :Isabelle_d_Aragon_1247-1271 ;
+        :nom    "Louis de France 1264-1276" .
+
+:Charles_d_Orléans_1820-1828
+        a       :Personne ;
+        :nom    "Charles d Orléans 1820-1828" ;
+        :pere   :Louis-Philippe_Ier .
+
+:Emma_de_France_894-934
+        a          :Reine , :Femme ;
+        :dynastie  :Robertiens ;
+        :epoux     :Raoul_de_France ;
+        :nom       "Emma de France 894-934" .
+
+:Adèle_de_France_1160-1221
+        a       :Personne ;
+        :mere   :Constance_de_Castille_v_1136-1160 ;
+        :nom    "Adèle de France 1160-1221" .
+
+:Alix_de_France_1150-1195
+        a       :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Alix de France 1150-1195" .
+
+:Marie-Anne_de_France
+        a       :Personne ;
+        :nom    "Marie-Anne de France" ;
+        :pere   :Louis_XIV .
+
+:Jeanne_de_Bourbon_1338-1378
+        a           :Reine , :Femme ;
+        :datedeces  "1378-02-06+02:00"^^xsd:date ;
+        :datenaiss  "1338-02-03+02:00"^^xsd:date ;
+        :dynastie   :Maison_de_Bourbon ;
+        :enfant     :Duc_d_Orléans , :Louis_Ier_d_Orléans ;
+        :epoux      :Charles_V_le_Sage ;
+        :fils       :Charles_VI_de_France ;
+        :nom        "Jeanne de Bourbon 1338-1378" .
+
+:Nicolas_d_Estouteville
+        a       :Personne ;
+        :nom    "Nicolas d Estouteville" ;
+        :pere   :François_Ier_roi_de_France .
+
+:Monsieur_d_Orléans_1607-1611
+        a       :Personne ;
+        :mere   :Marie_de_Médicis ;
+        :nom    "Monsieur d Orléans 1607-1611" .
+
+:Charles_VII_roi_de_France
+        a           :Roi , :Homme ;
+        :datedeces  "1461-07-22+02:00"^^xsd:date ;
+        :datenaiss  "1403-02-22+02:00"^^xsd:date ;
+        :dynastie   :Dynastie_des_Valois ;
+        :epouse     :Marie_d_Anjou ;
+        :mere       :Isabeau_de_Bavière ;
+        :nom        "Charles VII roi de France" ;
+        :pere       :Charles_VI_de_France .
+
+:Isabelle_de_France_1292-1358
+        a       :Personne ;
+        :mere   :Jeanne_Ire_de_Navarre ;
+        :nom    "Isabelle de France 1292-1358" ;
+        :pere   :Philippe_IV_le_Bel .
+
+:Dagobert_Ier  a  :Roi , :Homme ;
+        :epouse  :Nantilde ;
+        :nom     "Dagobert Ier" .
+
+:Catherine_de_France_1428-1446
+        a       :Personne ;
+        :mere   :Marie_d_Anjou ;
+        :nom    "Catherine de France 1428-1446" .
+
+:Elisabeth_de_France_1727-1759
+        a       :Personne ;
+        :mere   :Marie_Leszczynska ;
+        :nom    "Elisabeth de France 1727-1759" ;
+        :pere   :Louis_XV .
+
+:Louis_V_de_France  a  :Roi , :Homme ;
+        :epouse  :Adélaïde_d_Anjou ;
+        :nom     "Louis V de France" .
+
+:Charles_de_France_1496
+        a       :Personne ;
+        :nom    "Charles de France 1496" ;
+        :pere   :Charles_VIII_roi_de_France .
+
+:François_de_France_1555-1584
+        a       :Personne ;
+        :mere   :Catherine_de_Médicis ;
+        :nom    "François de France 1555-1584" ;
+        :pere   :Henri_II_roi_de_France .
+
+<http://www.asws.com/rois#Clotilde_%3F-531>
+        a       :Personne ;
+        :mere   :Clotilde_femme_de_Clovis ;
+        :nom    "Clotilde %3F-531" .
+
+:Philippe_de_France_1640-1701
+        a       :Personne ;
+        :mere   :Anne_d_Autriche_1601-1666 ;
+        :nom    "Philippe de France 1640-1701" .
+
+:Mathilde_d_Angleterre_1156-1189
+        a       :Personne ;
+        :mere   :Aliénor_d_Aquitaine ;
+        :nom    "Mathilde d Angleterre 1156-1189" .
+
+:Jeanne_Ire_d_Auvergne
+        a           :Femme , :Reine ;
+        :datedeces  "1360-09-29+02:00"^^xsd:date ;
+        :datenaiss  "1326-05-08+02:00"^^xsd:date ;
+        :dynastie   :Comtes_d_Auvergne ;
+        :epoux      :Jean_II_de_France , :Philippe_de_Bourgogne_1323-1346 ;
+        :nom        "Jeanne Ire d Auvergne" ;
+        :parent     :Guillaume_XII_d_Auvergne .
+
+:Louis_XI  a  :Roi , :Homme , :Prince ;
+        :epouse  :Charlotte_de_Savoie ;
+        :mere    :Marie_d_Anjou ;
+        :nom     "Louis XI de France" .
+
+:Charles_III_le_Simple
+        a           :Homme , :Roi ;
+        :datedeces  "0929-10-07+02:00"^^xsd:date ;
+        :datenaiss  "0879-09-17+02:00"^^xsd:date ;
+        :dynastie   :Carolingiens ;
+        :enfant     :Adélaïde_de_Frioul ;
+        :epouse     :Frédérune , :Edwige_de_Wessex ;
+        :fille      :Edwige_de_Wessex , :Frédérune ;
+        :nom        "Charles III le Simple" ;
+        :parent     :Adélaïde_de_Frioul , :Louis_II_de_France .
+
+:Blanche_de_Castille  a  :Femme , :Reine ;
+        :datedeces  "1252-11-27+02:00"^^xsd:date ;
+        :datenaiss  "1188-03-04+02:00"^^xsd:date ;
+        :dynastie   :Maison_d_Ivrée ;
+        :epoux      :Louis_VIII_de_France ;
+        :nom        "Blanche de Castille" ;
+        :parent     :Alphonse_VIII_de_Castille , :Aliénor_d_Angleterre_1161-1214 .
+
+:Foulque_IV_d_Anjou  a  :Roi , :Homme ;
+        :epouse  :Bertrade_de_Montfort ;
+        :nom     "Foulque IV d Anjou" .
+
+:Christine_de_France  a  :Personne ;
+        :mere   :Marie_de_Médicis ;
+        :nom    "Christine de France" ;
+        :pere   :Henri_IV_roi_de_France .

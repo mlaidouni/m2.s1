@@ -1,0 +1,16 @@
+#  les ressources de type asws:Roi 
+
+PREFIX asws: <http://www.asws.com/rois#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT count(?nom)
+WHERE {
+  ?roi a asws:Roi ;
+	   asws:nom ?nom ;
+	   FILTER NOT EXISTS { 
+		{?roi asws:enfant ?enfant.} UNION 
+		{?roi asws:fils ?fils.} UNION 
+		{?roi asws:fille ?fille.} 
+	   }
+
+}

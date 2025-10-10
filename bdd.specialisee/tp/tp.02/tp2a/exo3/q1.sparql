@@ -1,0 +1,10 @@
+#  les ressources de type asws:Roi 
+
+PREFIX asws: <http://www.asws.com/rois#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?p
+WHERE {
+	?p a rdf:Property .
+}

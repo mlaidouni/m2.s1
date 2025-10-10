@@ -1,0 +1,140 @@
+@prefix :      <http://www.asws.com/rois#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Louis_de_France_1549-1550
+        :successeur  :Charles_IX_roi_de_France .
+
+:Charles_III_le_Simple
+        :successeur  :Robert_Ier_de_France .
+
+:Louis_VII_de_France
+        :successeur  :Philippe_II_Auguste .
+
+:Philippe_II_de_France
+        :successeur  :Louis_VIII_le_Lion .
+
+:Casimir_Louis_Victurnien_de_Rochechouart_de_Mortemart
+        :successeur  :Louis-Philippe_Ier .
+
+:Louis_XV  :successeur  :Louis_XVI_de_France ;
+        :successeur  []  .
+
+:Maximilien_Sforza
+        :successeur  :François_Ier_roi_de_France .
+
+:Louis_XV_de_France
+        :successeur  :Louis_XVI .
+
+:Philippe_VI_de_France
+        :successeur  :Jean_II_le_Bon .
+
+:Louis_XVIII_de_France
+        :successeur  :Charles_X_roi_de_France .
+
+:Louis_XIV
+        :successeur  :Louis_XV .
+
+:Louis_XI_de_France
+        :successeur  :Charles_VIII_roi_de_France .
+
+:Robert_II_de_France
+        :successeur  :Henri_Ier_roi_des_Francs .
+
+:Louis_XII  :successeur  :Ludovic_Sforza , :François_Ier_de_France , :Ferdinand_II_d_Aragon , :Maximilien_Sforza ;
+        :successeur  []  .
+
+:Henri_IV_de_France
+        :successeur  :Louis_XIII .
+
+:Charles_VIII_roi_de_France
+        :successeur  :Ferdinand_II_de_Naples , :Louis_XII_de_France .
+
+:Philippe_II_Auguste
+        :successeur  :Louis_VIII_de_France .
+
+:Jean_II_le_Bon
+        :successeur  :Charles_V_de_France .
+
+:Louis_VIII_de_France
+        :successeur  :Louis_IX .
+
+:Louis_XII_de_France
+        :successeur  :François_Ier_roi_de_France .
+
+:Henri_Ier_roi_des_Francs
+        :successeur  :Philippe_Ier_de_France , :Robert_Ier_de_Bourgogne .
+
+:Louis_XI  :successeur  :Charles_Ier_d_Orléans ;
+        :successeur  []  .
+
+:Louis_XVI  :successeur  :Conseil_exécutif_Révolution_française , :Convention_nationale ;
+        :successeur  []  .
+
+:François_II_de_France
+        :successeur  :Louis_XIII , :Charles_IX_roi_de_France .
+
+:François_Ier_de_France
+        :successeur  :Henri_II_roi_de_France .
+
+:Frédéric_Ier_de_Naples
+        :successeur  :Louis_XII .
+
+:Charles_X_de_France
+        :successeur  :Louis-Philippe_Ier .
+
+:Charles_VII_de_France
+        :successeur  :Louis_XI .
+
+:Ludovic_Sforza
+        :successeur  :Louis_XII .
+
+:Louis_IX  :successeur  :Philippe_III_de_France .
+
+:Louis_X  :successeur  :Jean_Ier_de_France .
+
+:Alphonse_II_de_Naples
+        :successeur  :Charles_VIII_roi_de_France .
+
+:François_Ier_roi_de_France
+        :successeur  :Henri_II_de_France , :François_II_Sforza .
+
+:Louis_VIII_le_Lion
+        :successeur  :Louis_IX_de_France .
+
+:Jeanne_d_Albret
+        :successeur  :Henri_IV_roi_de_France .
+
+:Eudes_de_France
+        :successeur  :Charles_III_le_Simple .
+
+:Henri_II_roi_de_France
+        :successeur  :François_II_de_France , :Union_de_la_Bretagne_à_la_France .
+
+:Louis-Philippe_Ier
+        :successeur  :Jacques_Laffitte ;
+        :successeur  []  .
+
+:Charles_X_roi_de_France
+        :successeur  []  ;
+        :successeur  []  ;
+        :successeur  []  ;
+        :successeur  []  .
+
+:Henri_III_de_France
+        :successeur  :Henri_IV_roi_de_France .
+
+:Henri_IV_roi_de_France
+        :successeur  :Louis_XIII_de_France .
+
+:Charles_Ier_d_Orléans
+        :successeur  :Louis_XII .
+
+:Charles_IX_roi_de_France
+        :successeur  :Henri_III_de_France .
+
+:Philippe_IV_de_France
+        :successeur  :Louis_X .
+
+:Louis_XIII
+        :successeur  :Louis_XIV .
