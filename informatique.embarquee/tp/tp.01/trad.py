@@ -1,63 +1,113 @@
-"""
-ENCODAGE:
+import sys
+import re
+import struct
 
-A-type:
-
-OP (8 bits), r1 (6 bits), r2 (6 bits), r3 (6 bits), padding (6 bits)
-
-B-type:
-
-OP (8 bits), r1 (6 bits), r2 (6 bits), aux (12 bits)
-"""
-
-# --- CONSTANTES ---
-
+# Opcode mapping
 OPCODES = {
-    """Dictionnaire des opcodes
-    """
-    "add": 0,
-    "sub": 0,
-    "mul": 0,
-    "div": 0,
-    "and": 0,
-    "or": 0,
-    "xor": 0,
-    "addi": 0,
-    "subi": 0,
-    "muli": 0,
-    "divi": 0,
-    "andi": 0,
-    "ori": 0,
-    "xori": 0,
-    "lw": 0,
-    "sw": 0,
-    "beq": 0,
-    "bne": 0,
-    "blo": 0,
-    "bgt": 0,
+    "add": 1,
+    "sub": 2,
+    "mul": 3,
+    "div": 4,
+    "and": 5,
+    "or": 6,
+    "xor": 7,
+    "addi": 8,
+    "subi": 9,
+    "muli": 10,
+    "divi": 11,
+    "andi": 12,
+    "ori": 13,
+    "xori": 14,
+    "lw": 15,
+    "sw": 16,
+    "beq": 17,
+    "bne": 18,
+    "blo": 19,
+    "bgt": 20,
 }
 
 
-# --- LECTURE DU FICHIER ---
-def read_all_lines(path):
-    """_summary_
+def read_source(path):
+    """Lit un fichier source et retourne une liste de lignes.
 
     Args:
-        path (_type_): _description_
+        path (string): chemin du fichier source
 
     Returns:
-        _type_: _description_
+        list of string: lignes du fichier.
     """
     with open(path, "r", encoding="utf-8") as f:
         return [line.rstrip("\n") for line in f]
 
 
-# --- PARSING ---
-def parse_line(line):
+def split_operands(operand_string):
+    """Sépare les opérandes d'une instruction, par virgule.
+
+    Args:
+        operand_string (string): la chaîne des opérandes
+
+    Returns:
+        list of string: liste des opérandes
+    """
+    # On split par virgule, sans séparer les parenthèses et opérandes collées
+    parts = [p.strip() for p in operand_string.split(",")]
+    return [p for p in parts if p != ""]
+
+
+def is_label(line):
+    """Renvoie True si la ligne est un label (se termine par ':').
+
+    Args:
+        line (string): la ligne
+
+    Returns:
+        boolean: True si c'est un label, False sinon
+    """
+    return line.endswith(":")
+
+
+# === Parsage des opérandes ===
+
+
+def parse_register(s):
+    """Parse un registre au format $n où n est entre 0 et 63.
+
+    Args:
+        s (string): la chaîne à parser
+
+    Raises:
+        ValueError: registre invalide
+        ValueError: registre hors limites
+
+    Returns:
+        int: le numéro de registre
+    """
+    s = s.strip()
+    if not s.startswith("$"):
+        raise ValueError(f"registre invalide: {s}")
+    n = int(s[1:])
+    if not 0 <= n <= 63:
+        raise ValueError(f"registre hors limites: {n}")
+    return n
+
+
+def parse_imm(s):
+    """Parse une valeur immédiate.
+
+    Args:
+        s (string): la chaîne à parser
+
+    Returns:
+        int: la valeur immédiate.
+    """
+    return int(s.strip())
+
+
+def parse_memory_operand(s):
     """_summary_
 
     Args:
-        line (_type_): _description_
+        s (_type_): _description_
 
     Raises:
         ValueError: _description_
@@ -65,92 +115,27 @@ def parse_line(line):
     Returns:
         _type_: _description_
     """
-    if not line:
-        raise ValueError("ligne vide")
-
-    parts = line.split()
-    mnemonic = parts[0]
-    operands = " ".join(parts[1:]).split(
-        ","
-    )  # Séparation des opérandes par des virgules
-
-    # Nettoyage de l'espace dans les opérandes
-    operands = [op.strip() for op in operands]
-    return mnemonic, operands
-
-
-# --- TRADUCTION ---
-def parse_register(reg_str):
-    """Parse un registre
-
-    Args:
-        reg_str (string): registre au format $n
-
-    Raises:
-        ValueError: _description_
-        ValueError: _description_
-        ValueError: _description_
-
-    Returns:
-        _type_: _description_
-    """
-    if not reg_str.startswith("$"):
-        raise ValueError(f"registre invalide: {reg_str}")
-    try:
-        reg_num = int(reg_str[1:])
-    except ValueError as exc:
-        raise ValueError(f"registre invalide: {reg_str}") from exc
-
-    if not 0 <= reg_num <= 63:
-        raise ValueError(f"numéro de registre hors limites (0-63): {reg_num}")
-    return reg_num
+    # "offset($base)", "($base)"
+    s = s.strip()
+    m = re.match(r"^([+-]?\d+)?\s*\(\s*(\$\d+)\s*\)$", s)
+    if m:
+        off = m.group(1)
+        base = m.group(2)
+        offset = int(off) if off is not None else 0
+        return base, offset
+    # Cas registre directe, e.g. "($0)"
+    if s.startswith("(") and s.endswith(")"):
+        inner = s[1:-1].strip()
+        return inner, 0
+    raise ValueError(f"format mémoire invalide: {s}")
 
 
-def parse_aux(aux_str):
-    """Parse une valeur auxiliaire sur 12 bits.
-
-    Args:
-        aux_str (string): valeur auxiliaire
-
-    Raises:
-        ValueError: _description_
-        ValueError: _description_
-
-    Returns:
-        _type_: _description_
-    """
-    try:
-        aux_val = int(aux_str)
-    except ValueError as exc:
-        raise ValueError(f"valeur auxiliaire invalide: {aux_str}") from exc
-    if not -2048 <= aux_val <= 2047:  # FIXME Valeur signée sur 12 bits
-        raise ValueError(f"valeur aux hors limites (-2048 à 2047): {aux_val}")
-    return aux_val & 0xFFF  # FIXME On garde les 12 bits de poids faible
-
-
-# Renvoie l'opcode correspondant au mnémonique
-def get_opcode(mnemonic):
-    """_summary_
-
-    Args:
-        mnemonic (_type_): _description_
-
-    Raises:
-        KeyError: _description_
-
-    Returns:
-        _type_: _description_
-    """
-    if mnemonic not in OPCODES:
-        raise KeyError(f"mnemonic inconnu: {mnemonic}")
-    return OPCODES.get(mnemonic)
-
-
+# --- Encodage des instructions ---
 def encodage_a(opcode, r1, r2, r3):
     """Encode une instruction de type A
 
     Args:
-        opcode (_type_): l'opcode
+        opcode (int): l'opcode
         r1 (int): registre r1
         r2 (int): registre r2
         r3 (int): registre r3
@@ -158,15 +143,14 @@ def encodage_a(opcode, r1, r2, r3):
     Returns:
         int: instruction encodée
     """
-    instruction = (opcode << 24) | (r1 << 18) | (r2 << 12) | (r3 << 6) | 0
-    return instruction
+    return (opcode << 24) | (r1 << 18) | (r2 << 12) | (r3 << 6)
 
 
 def encodage_b(opcode, r1, r2, aux):
-    """Encode une instruction de type B
+    """Encode une instruction de type B (lw/sw, branchements, immediates)
 
     Args:
-        opcode (_type_): l'opcode
+        opcode (int): l'opcode
         r1 (int): registre r1
         r2 (int): registre r2
         aux (int): valeur auxiliaire sur 12 bits
@@ -174,62 +158,216 @@ def encodage_b(opcode, r1, r2, aux):
     Returns:
         int: instruction encodée
     """
-    instruction = (opcode << 24) | (r1 << 18) | (r2 << 12) | aux
-    return instruction
+    return (
+        (opcode << 24) | (r1 << 18) | (r2 << 12) | (aux & 0xFFF)
+    )  # 0xFFF pour garder 12 bits
 
 
-def encode_instruction(mnemonic, operands):
-    """Encode une instruction
+def first_pass(lines):
+    """Première passe: collecte des labels et des lignes d'instructions."""
+    labels = {}
+    instr_lines = []
+    pc = 0
+    for line in lines:
+        if is_label(line):
+            name = line[:-1].strip()
+            if not name:
+                raise ValueError("label vide")
+            if name in labels:
+                raise ValueError(f"label dupliqué: {name}")
+            labels[name] = pc
+        else:
+            instr_lines.append(line)
+            pc += 1
+    return instr_lines, labels
+
+
+def build_instr_atype(mnemonic, ops, opcode):
+    """Construit une ligne de type A (3 registres).
+    add/sub/mul/div/and/or/xor
 
     Args:
-        mnemonic (_type_): mnémonique
-        operands (list): liste des opérandes
+        mnemonic (string): mnemonic de l'opcode
+        ops (string): opérandes
+        opcode (int): opcode numérique
 
     Raises:
-        ValueError: _description_
-        ValueError: _description_
+        ValueError: nombre d'opérandes incorrect
 
     Returns:
         int: instruction encodée
     """
-    opcode = get_opcode(mnemonic)
+    if len(ops) != 3:
+        raise ValueError(f"{mnemonic} attend 3 opérandes")
+    r1 = parse_register(ops[0])
+    r2 = parse_register(ops[1])
+    r3 = parse_register(ops[2])
+    return encodage_a(opcode, r1, r2, r3)
 
-    if mnemonic not in OPCODES:
-        raise ValueError(f"mnemonic inconnu: {mnemonic}")
 
-    if len(operands) != 3:
-        raise ValueError(f"nombre d'opérandes invalide pour {mnemonic}")
+def build_instr_btype_load_store(mnemonic, ops, opcode):
+    """Construit une ligne de type B load/store (2 opérandes).
 
-    # Instructions de type A
-    if mnemonic in ["add", "sub", "mul", "div", "and", "or", "xor"]:
-        r1 = parse_register(operands[0])
-        r2 = parse_register(operands[1])
-        r3 = parse_register(operands[2])
-        return encodage_a(opcode, r1, r2, r3)
+    Args:
+        mnemonic (string): mnemonic de l'opcode
+        ops (string): opérandes
+        opcode (int): opcode numérique
 
-    # Instructions de type B
+    Raises:
+        ValueError: nombre d'opérandes incorrect
+        ValueError: offset hors plage
+
+    Returns:
+        int: instruction encodée
+    """
+    if len(ops) == 2:
+        r1 = parse_register(ops[0])
+        base_reg_str, offset = parse_memory_operand(ops[1])
+        r2 = parse_register(base_reg_str)
+        aux = offset
     else:
-        r1 = parse_register(operands[0])
-        r2 = parse_register(operands[1])
-        aux = parse_aux(operands[2])
-        return encodage_b(opcode, r1, r2, aux)
+        raise ValueError(f"{mnemonic} attend 2 opérandes")
+    if not -2048 <= aux <= 2047:
+        raise ValueError(f"offset hors plage: {aux}")
+    return encodage_b(opcode, r1, r2, aux)
 
 
-# --- MAIN ---
-SOURCE_PATH = "program.txt"
-OUTPUT_PATH = "out.bin"
-lines = read_all_lines(SOURCE_PATH)
+def build_instr_btype_branch(mnemonic, ops, opcode, pc, labels):
+    """Construit une ligne de type B branchement (3 opérandes).
 
-# TEST: print(lines)
-print("=== Lignes lues ===")
-for li in lines:
-    print(li)
-print("===================")
+    Args:
+        mnemonic (string): mnemonic de l'opcode
+        ops (string): opérandes
+        opcode (int): opcode numérique
+        pc (int): numéro de l'instruction courante
+        labels (list of string): liste des labels connus
 
-for li in lines:
-    m, o = parse_line(li)
-    print(f"mnemonic: {m}, operands: {o}")
+    Raises:
+        ValueError: nombre d'opérandes incorrect
+        KeyError: label inconnu
+        ValueError: offset branch hors plage
 
-    opc = get_opcode(m)
-    print(f"opcode: {opc}")
-    print(f"opcode: {opc:#04x}")
+    Returns:
+        int: instruction encodée
+    """
+    if len(ops) != 3:
+        raise ValueError(f"{mnemonic} attend 3 opérandes")
+    r1 = parse_register(ops[0])
+    r2 = parse_register(ops[1])
+    target = ops[2]
+    # si ce n'est pas un nombre (valeur immédiate), sinon on résout le label
+    try:
+        aux = parse_imm(target)
+    except ValueError as exc:
+        if target not in labels:
+            raise KeyError(f"label inconnu: {target}") from exc
+        label_pc = labels[target]
+        # offset relatif (nombre d'instructions à sauter depuis l'instruction suivante)
+        aux = label_pc - (pc + 1)
+    if not -2048 <= aux <= 2047:
+        raise ValueError(f"offset branch hors plage: {aux}")
+    return encodage_b(opcode, r1, r2, aux & 0xFFF)
+
+
+def build_instr_btype_immediate(mnemonic, ops, opcode):
+    """Construit une ligne de type B immediate (3 opérandes).
+
+    Args:
+        mnemonic (string): mnemonic de l'opcode
+        ops (string): opérandes
+        opcode (int): opcode numérique
+
+    Raises:
+        ValueError: nombre d'opérandes incorrect
+        ValueError: immédiate hors plage
+
+    Returns:
+        int: instruction encodée
+    """
+    if len(ops) != 3:
+        raise ValueError(f"{mnemonic} attend 3 opérandes")
+    r1 = parse_register(ops[0])
+    r2 = parse_register(ops[1])
+    aux = parse_imm(ops[2])
+    if not -2048 <= aux <= 2047:
+        raise ValueError(f"imm hors plage: {aux}")
+    return encodage_b(opcode, r1, r2, aux & 0xFFF)
+
+
+def assemble_line(line, pc, labels):
+    """_summary_
+
+    Args:
+        line (_type_): _description_
+        pc (_type_): _description_
+        labels (_type_): _description_
+
+    Raises:
+        ValueError: _description_
+        KeyError: _description_
+        ValueError: _description_
+        ValueError: _description_
+        ValueError: _description_
+        ValueError: _description_
+        KeyError: _description_
+        ValueError: _description_
+        ValueError: _description_
+        ValueError: _description_
+        NotImplementedError: _description_
+
+    Returns:
+        _type_: _description_
+    """
+    parts = line.split(None, 1)
+    if not parts:
+        raise ValueError("ligne vide")
+    mnemonic = parts[0]
+    operands_text = parts[1] if len(parts) > 1 else ""
+    if mnemonic not in OPCODES:
+        raise KeyError(f"mnemonic inconnu: {mnemonic}")
+    opcode = OPCODES[mnemonic]
+
+    ops = split_operands(operands_text)
+    # Type A
+    if mnemonic in ("add", "sub", "mul", "div", "and", "or", "xor"):
+        return build_instr_atype(mnemonic, ops, opcode)
+
+    # load/store: lw rd, offset(base)  OR  sw rs, offset(base)
+    if mnemonic in ("lw", "sw"):
+        return build_instr_btype_load_store(mnemonic, ops, opcode)
+
+    # Branches: beq r1, r2, label
+    if mnemonic in ("beq", "bne", "blo", "bgt"):
+        return build_instr_btype_branch(mnemonic, ops, opcode, pc, labels)
+
+    # immediates arithmétiques: addi r1, r2, imm
+    if mnemonic.endswith("i"):
+        return build_instr_btype_immediate(mnemonic, ops, opcode)
+
+    raise NotImplementedError(f"format non géré pour {mnemonic}")
+
+
+# === Assemblage finale ===
+def assemble(src_path, out_path):
+    """Assemble un fichier source en binaire.
+
+    Args:
+        src_path (string): chemin du fichier source
+        out_path (string): chemin du fichier binaire de sortie
+    """
+    lines = read_source(src_path)
+    instr_lines, labels = first_pass(lines)
+    instructions = []
+    for pc, line in enumerate(instr_lines):
+        inst = assemble_line(line, pc, labels)
+        instructions.append(inst)
+    with open(out_path, "wb") as fout:
+        for inst in instructions:
+            fout.write(struct.pack(">I", inst))
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        print("Usage: python trad.py program.asm out.bin")
+        sys.exit(1)
+    assemble(sys.argv[1], sys.argv[2])
