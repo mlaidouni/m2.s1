@@ -17,7 +17,7 @@ loop:
     rcall sleep_500_ms
     cbi 0x05, 5          ; éteint la LED
     rcall sleep_500_ms
-    rjmp loop
+    rjmp loop ; boucle infinie pour faire clignoter la LED
 
 
 ; --- sleep_500_ms function (≈500 ms using 3-byte downcounter)
