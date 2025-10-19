@@ -1,4 +1,4 @@
-PORT := /dev/cu.usbmodem11201 # for MacOs (/dev/ttyACM0 for Linux)
+PORT := /dev/cu.usbmodem11301 # for MacOs (/dev/ttyACM0 for Linux)
 
 SRCS := main.s
 OBJ := $(SRCS:.s=.o)
@@ -8,7 +8,7 @@ HEX := program.hex
 all: assemble convert flash
 
 assemble:
-	avr-as $(SRC) -o $(OBJ)
+	avr-as $(SRCS) -o $(OBJ)
 	avr-ld $(OBJ) -o $(ELF)
 
 verify:

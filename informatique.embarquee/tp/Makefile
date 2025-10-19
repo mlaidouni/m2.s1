@@ -8,7 +8,7 @@ HEX := program.hex
 all: assemble convert flash
 
 assemble:
-	avr-as $(SRC) -o $(OBJ)
+	avr-as $(SRCS) -o $(OBJ)
 	avr-ld $(OBJ) -o $(ELF)
 
 verify:
