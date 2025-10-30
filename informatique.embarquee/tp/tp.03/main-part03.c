@@ -16,7 +16,7 @@ void led_on(void) { PORTB |= _BV(PORTB5); }
 void led_off(void) { PORTB &= ~_BV(PORTB5); }
 
 /* Interruption Timer1 CompareA */
-ISR(WDT_vect)
+ISR(TIMER1_COMPA_vect)
 {
     if (pattern[pattern_idx]) led_on();
     else led_off();
@@ -33,19 +33,32 @@ int main (void)
     PORTB = 0;
 
 	// On désactive les modules non utilisés du MCU pour économiser de l'énergie
-	// [doc page 53] On utilse WDT, donc on désactive ADC, Analog Comparator, Timer1
-	PRR = _BV(PRADC) | _BV(PRUSART0) | _BV(PRSPI) | _BV(PRTWI) | _BV(PRTIM1);
+	// [doc page 53] On utilse Timer1, donc on désactive ADC, Analog Comparator
+	PRR = _BV(PRADC) | _BV(PRUSART0) | _BV(PRSPI) | _BV(PRTWI);
 
-	// On configure le WDT en mode interruption toutes les 500ms
-	cli(); // Désactive les interruptions globales pendant la configuration du WDT
+	// On configure le Timer1 en mode CTC, OCR1A comme TOP et le prescaler à 256
+	/* Voir la page 141 de la doc.
+	https://ww1.microchip.com/downloads/en/DeviceDoc/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf
 
-	// TODO: 
+	[doc page 141] Pour mettre en mode CTC avec OCR1A comme TOP, il faut choisir le mode 4 (WGM13:0 = 0100)
+
+	Pour cela, il faut mettre à 0 les bits WGM10 et WGM11, via TCCR1A [doc page 140]
+	Il faut mettre à 0 le bit WGM13 (pour que le TOP soit OCR1A), via TCCR1B [doc page 142]
+	Il faut mettre à 1 le bit WGM12, via TCCR1B [doc page 142]
+	Pour choisir un prescaler de 256, il faut mettre à 1 le bit CS12 et à 0 les bits CS11 et CS10, via TCCR1B [doc page 143]
+	*/
+	TCCR1A = 0;
+	TCCR1B = _BV(WGM12) | _BV(CS12);
+	OCR1A = 31249; // Pour une interruption toutes les 500ms à 16MHz
+
+	// On active les interruptions du Timer1 CompareA [doc page 144]
+	TIMSK1 = _BV(OCIE1A);
 
 	// On active les interruptions globales
 	sei();
 
 	// On met le MCU en mode sommeil (on a besoin de conserver Timer1 actif)
-	set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+	set_sleep_mode(SLEEP_MODE_IDLE);
 
 	for (;;) sleep_mode(); // Boucle principale : on dort en attendant les interruptions de Timer1
 }
