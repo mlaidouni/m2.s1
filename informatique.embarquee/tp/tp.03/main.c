@@ -2,6 +2,11 @@
 #include <avr/interrupt.h>
 #include <avr/sleep.h>
 
+/* Note [cours 6, page 36]
+On préfère les variable stockées sur 1 octet (uint8_t), 
+plutôt que sur plusieurs octets (int -> 2 octets).
+*/
+
 const uint8_t pattern[] = {1,0,1,0,1,0,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0};
 
 /* Doit être globale volatile pour être utilisée dans l'ISR */
