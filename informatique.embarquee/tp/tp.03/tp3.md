@@ -51,3 +51,7 @@ avec $T_{interruption}$ = 0.5s
 | 1024      | 15624  | 0.503s                |
 
 On choisit donc un prescaler de 256 et OCR1A = 31249 pour avoir une interruption toutes les 500ms.
+
+### Question 6
+
+Pour attendre plusieurs minutes/heures/jours, on peut utiliser une variable compteur qui s'incrémente à chaque interruption de 500ms. Par exemple, pour attendre 5 minutes, on initialise un compteur à 0 et on l'incrémente à chaque interruption. Lorsque le compteur atteint 600 (5 minutes = 300 secondes = 600 x 0.5 secondes), on arrête l'attente.
