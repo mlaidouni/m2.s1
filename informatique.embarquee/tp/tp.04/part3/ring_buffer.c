@@ -10,7 +10,7 @@ void ring_buffer__init(struct ring_buffer *rb, uint8_t *buffer, uint8_t size) {
 
 void ring_buffer__push(struct ring_buffer *rb, uint8_t data) {
     uint8_t next = rb->head + 1;
-    if (next >= rb->maxlen) next = 0;
+    if (next >= rb->maxlen) next = 0; // On a fait le tour
 
     if (next == rb->tail) {  // buffer plein → écrasement
         uint8_t new_tail = rb->tail + 1;
@@ -25,7 +25,7 @@ void ring_buffer__push(struct ring_buffer *rb, uint8_t data) {
 uint8_t ring_buffer__pop(struct ring_buffer *rb, uint8_t *data) {
     uint8_t is_empty;
 
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) {
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE) { // Désactive temporairement les interruptions
         is_empty = (rb->head == rb->tail);
     }
 

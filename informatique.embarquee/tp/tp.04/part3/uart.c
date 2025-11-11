@@ -1,19 +1,35 @@
 #include <avr/io.h>
-#include <stdint.h>
+#include <avr/interrupt.h>
 #include "uart.h"
+#include "ring_buffer.h"
+
+#define RX_BUFFER_SIZE 64
+
+static uint8_t rx_buffer_data[RX_BUFFER_SIZE];
+static struct ring_buffer rx_buffer;
 
 void UART__init(void) {
     uint16_t ubrr = MYUBRR;
-    UBRR0H = (uint8_t)(ubrr >> 8);  // bits de poids fort du baud rate (bits 15–8)
-    UBRR0L = (uint8_t)ubrr;         // bits de poids faible (bits 7–0)
+    UBRR0H = (uint8_t)(ubrr >> 8);
+    UBRR0L = (uint8_t)ubrr;
 
-    UCSR0B = (1 << RXEN0) | (1 << TXEN0);           // Active RX/TX
-    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);         // 8 bits, 1 stop, pas de parité
+    ring_buffer__init(&rx_buffer, rx_buffer_data, RX_BUFFER_SIZE);
+
+    UCSR0B = (1 << RXEN0) | (1 << TXEN0) | (1 << RXCIE0); // Active RX/TX + interruption
+    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
+
+    sei();
+}
+
+ISR(USART_RX_vect) {
+    uint8_t data = UDR0; // lit la donnée reçue
+    ring_buffer__push(&rx_buffer, data); // la stocke
 }
 
 uint8_t UART__getc(void) {
-    while (!(UCSR0A & (1 << RXC0))) ; // attend qu’un octet soit reçu
-    return UDR0;                       // lit la donnée reçue
+    uint8_t data;
+    if (ring_buffer__pop(&rx_buffer, &data)) return data;
+    return 0; // rien à lire (valeure par défaut)
 }
 
 void UART__putc(uint8_t data) {

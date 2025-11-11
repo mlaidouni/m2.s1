@@ -13,7 +13,7 @@ upload: program.hex
 program.hex: program.elf
 	avr-objcopy -O ihex $^ $@
 
-program.elf: main.c uart.c
+program.elf: main.c uart.c ring_buffer.c
 	avr-gcc $(CFLAGS) -o $@ $^
 
 clean:

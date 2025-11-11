@@ -7,10 +7,12 @@ int main(void) {
     UART__init();
 
     while (1) {
-        UART__getc();
-        PORTB |= (1 << PB5); // allume la LED
-        _delay_ms(5000);
-        PORTB &= ~(1 << PB5); // éteint la LED
-		// UART__putc(c); // renvoie le caractère reçu
+        uint8_t c = UART__getc();
+		if(c) {
+			PORTB |= (1 << PB5); // allume la LED
+			_delay_ms(5000);
+			PORTB &= ~(1 << PB5); // éteint la LED
+			// UART__putc(c); // renvoie le caractère reçu
+		}
     }
 }
