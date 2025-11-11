@@ -3,16 +3,11 @@
 #include "uart.h"
 
 int main(void) {
-    DDRB |= (1 << PB5); // configure la broche PB5 (LED intégrée) en sortie
     UART__init();
 
     while (1) {
-        uint8_t c = UART__getc();
-		if(c) {
-			PORTB |= (1 << PB5); // allume la LED
-			_delay_ms(5000);
-			PORTB &= ~(1 << PB5); // éteint la LED
-			// UART__putc(c); // renvoie le caractère reçu
-		}
+		uint8_t c = UART__getc();
+		UART__putc(c);
+        _delay_ms(100); // Petite pause pour éviter de saturer l'émetteur, et permettre de voir les caractères un par un
     }
 }
