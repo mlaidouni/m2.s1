@@ -1,67 +1,51 @@
-#include <avr/io.h>        
-#include <avr/interrupt.h> 
-#include <avr/sleep.h>     
-#include <avr/wdt.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <avr/sleep.h>
+#include <stdint.h>
 
+const uint8_t pattern[] = {1,0,1,0,1,0,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0};
 
-const uint8_t pattern[] = {1,0,1,0,1,0,0,0,1,1,1,0,1,1,1,0,1,1,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0  };
+/* Doit être globale volatile pour être utilisée dans l'ISR */
 volatile uint8_t pattern_idx = 0;
 
-void led_on(void)  { PORTD |= _BV(PORTD4); }   // Met le bit PD4 à 1 → LED allumée
-void led_off(void) { PORTD &= ~_BV(PORTD4); }  // Met le bit PD4 à 0 → LED éteinte
+/* On pilote maintenant PD4 */
+void led_on(void)  { PORTD |= _BV(PORTD4); }
+void led_off(void) { PORTD &= ~_BV(PORTD4); }
 
-ISR(WDT_vect)
+/* Interruption Timer1 CompareA */
+ISR(TIMER1_COMPA_vect)
 {
     if (pattern[pattern_idx]) led_on();
     else led_off();
 
     pattern_idx++;
-
-    // Si on atteint la fin du tableau, on revient au début (motif en boucle)
-    if (pattern_idx >= (sizeof(pattern) / sizeof(pattern[0])))
+    if (pattern_idx >= sizeof(pattern)/sizeof(pattern[0]))
         pattern_idx = 0;
 }
 
-void WDT_Init(void)
+int main (void)
 {
-    cli();  // Désactive les interruptions globales pendant la configuration
+    // On configure PD4 comme sortie
+    DDRD = _BV(DDD4);
+    PORTD = 0; // LED éteinte au départ
 
-    MCUSR &= ~(1 << WDRF);  // Efface le flag de reset Watchdog (au cas où il a été déclenché précédemment)
-
-    // Autorise la modification du registre WDTCSR pendant 4 cycles d’horloge
-    WDTCSR |= (1 << WDCE) | (1 << WDE);
-
-    /*
-     * Configuration du registre WDTCSR :
-     * - WDIE : active les interruptions du WDT (au lieu d’un reset)
-     * - WDP2 + WDP0 : définit le prescaler pour une période ≈ 500 ms
-     */
-    WDTCSR = (1 << WDIE) | (1 << WDP2) | (1 << WDP0);
-
-    sei();  // Réactive les interruptions globales
-}
-
-int main(void)
-{
-    DDRDﬂ = _BV(DDD4);
-    PORTD = 0;  
-
-    //Désactivation des modules inutilisés pour économiser de l’énergie
-     
+    // Désactiver les modules non utilisés pour économiser de l'énergie
     PRR = _BV(PRADC) | _BV(PRUSART0) | _BV(PRSPI) | _BV(PRTWI);
 
-    // Initialisation du Watchdog Timer
-    WDT_Init();
+    // Configuration Timer1 en mode CTC, prescaler 256
+    TCCR1A = 0;
+    TCCR1B = _BV(WGM12) | _BV(CS12);
+    OCR1A = 31249; // interruption toutes les 500ms à 16MHz
 
-    /*
-     * Configuration du mode de sommeil :
-     * SLEEP_MODE_IDLE → mode léger, le CPU dort mais les interruptions et les E/S restent actives.
-     * (SLEEP_MODE_PWR_DOWN désactiverait trop de modules, la LED ne changerait pas d’état.)
-     */
+    // Activation interruption Timer1 CompareA
+    TIMSK1 = _BV(OCIE1A);
+
+    // Activation interruptions globales
+    sei();
+
+    // Mode sommeil IDLE
     set_sleep_mode(SLEEP_MODE_IDLE);
 
-    while (1)
-    {
-        sleep_mode();  // Endort le MCU, réveillé par ISR(WDT_vect)
-    }
+    // Boucle principale
+    for (;;) sleep_mode();
 }
