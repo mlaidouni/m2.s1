@@ -13,7 +13,7 @@ upload: program.hex
 program.hex: program.elf
 	avr-objcopy -O ihex $^ $@
 
-program.elf: main.c
+program.elf: main-q6.c
 	avr-gcc $(CFLAGS) -o $@ $<
 
 clean:
