@@ -20,18 +20,21 @@ uint16_t adc_read(void)
 int main(void)
 {
     // LED sur PD6 (OC0A)
-    DDRD |= _BV(DDD6);
+    DDRD |= (1 << DDD6);
 
     // PWM Timer0 Fast PWM, non inversé
-    TCCR0A = _BV(COM0A1) | _BV(WGM00) | _BV(WGM01);
-    TCCR0B = _BV(CS01); // prescaler = 8 (fréquence PWM élevée)
+    TCCR0A = (1 << COM0A1) | (1 << WGM00) | (1 << WGM01);
+    TCCR0B = (1 << CS01); // prescaler = 8 (fréquence PWM élevée)
 
     adc_init();
 
     while (1)
     {
         uint16_t pot = adc_read();   // 0 à 1023
-        OCR0A = pot >> 2;
+
+        // mise à l'échelle vers 0-255
+        OCR0A = pot >> 2;            // équivalent à /4
+
         _delay_ms(10);
     }
 }
