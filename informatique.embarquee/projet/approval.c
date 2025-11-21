@@ -5,6 +5,7 @@
 /* Allume et éteint la LED */
 void led_on(void) { LED_PORT |= _BV(LED_BIT); }
 void led_off(void) { LED_PORT &= ~_BV(LED_BIT); }
+static inline void led_toggle(void) { LED_PORT ^= _BV(LED_BIT); }
 
 /* Initialisation de Timer1 pour des interruptions toutes les 1ms */
 static void timer1_init(void) {
@@ -30,6 +31,5 @@ void approval_init(void) {
 ISR(TIMER1_COMPA_vect)
 {
 	// On alterne l'état de la LED
-	if (LED_PORT & _BV(LED_BIT)) led_off();
-	else led_on();
+	led_toggle();
 }
