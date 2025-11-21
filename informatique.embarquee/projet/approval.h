@@ -22,4 +22,8 @@
 
 void approval_init(void);
 
+/* Timeout 10s */
+uint8_t approval_timeout(void);
+void approval_timeout_clear(void);
+
 #endif
