@@ -1,5 +1,0 @@
-.env
-build
-yubino.egg-info
-dist
-**/*.pyc
