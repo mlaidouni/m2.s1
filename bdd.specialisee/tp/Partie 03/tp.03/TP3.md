@@ -1,41 +1,48 @@
 # TP3 Bases de données spécialisées
-# 2024 - 2025
+# 2025 - 2026
 
 
 ## Connect to your Cassandra cluster using cqlsh.
 
-   Does `nodetool describecluster` work on all the nodes ?
-   If not, why not ?
-   What is the root cause of this apparently non-deterministic behaviour ?
+   Does `nodetool describecluster` work on all the nodes?
+   If not, why not?
+   What is the root cause of this apparently non-deterministic behaviour?
+
+
+## Python
+
+   Install python, the python driver for cassandra and
+   run on your cluster suitable variants of the programs
+   discussed during the lecture. 
    
-
-## Install python, the python driver for cassandra and
-   run on your cluster all the programs seen during the 
-   lecture. 
-   
-   Have you encountered any difficulty that
-   we have not seen during the lecture ?
+   Have you encountered any difficulty?
 
 
-## After having created a keyspace 'demo',
-   compare the results of executing the command lines
+## Describering
+
+   Create a keyspace 'demo', compare the results of 
+   executing the command lines
    
    nodetool describering demo
    nodetool describering system
 
-   Why is there a difference in the outputs ?
-   Why is there such difference ?
+   Why is there a difference in the outputs?
+   Why is there such difference?
    
 
-## The file ex6-music.py can create two small keyspaces
-   with data related to music. Can you 
-   1) think of queries to use these data ?
+## Music DB
+
+   The execution of the file `ex6-music.py` creates
+   two small column families with data related to music. 
+
+   1) Which queries to use these data are reasonable in
+	a real world application?
    
-   2) does the data model fit your queries ?
-      If not, can you change the keyspace schema ?
+   2) Does the data model fit the queries of part 1) above?
+      If not, can you change the keyspace schema?
 	  
    3) Perform a read query at different consistency levels,
-	  and with a different number of machine turned on.
+	  and with a different number of nodes on-line.
 	  Produce results that indeed show the
 	  difference in consistency levels.
 
@@ -45,12 +52,12 @@
   benchbase/src/main/java/com/oltpbenchmark/benchmarks/tpcc     
   
   Do you think it makes sense to adapt TPC-C to run
-  on a cassandra cluster ?
+  on a cassandra cluster?
   
-  If yes, can you adapt the code to run it on your cluster ?
-  If not, why not ?
+  If yes, can you adapt the code to run it on your cluster?
+  If not, why not?
   And if you were forced to modify the code,
-  what would you modify and why ?
+  what would you modify and why?
 
 
 
@@ -58,16 +65,17 @@
 ## EVALUATION
 
 Prepare a talk (along with the slides !)
-in which you summarise all the answers to 
-questions asked in the exercises for the TPs
+in which you present interesting facts and/or solutions
+to problems related to the material we have discussed
+during the lectures,
 
 OR
 
 you briefly expose the ideas behind the solutions
 to problems hinted at during the lectures
-(Why does the failure detection in Cassandra ctually work ?
-Why does Paxos work ?
-How did the Dynamo database influence the deisng of Cassandra ?
+(Why does the failure detection in Cassandra actually work?
+Why does Paxos work?
+How did the Dynamo database influence the design of Cassandra?
 ...)
 
 If all the exercises were easy, you are free
@@ -87,23 +95,14 @@ The file containing the slides must be in
    
 and its name must have the form
 
-   bds-2425-GROUPNAME.pdf
+   bds-2526-GROUPNAME.pdf
 
 where GROUPNAME is the name of your group.
    
-The file containing the slides must be sent
-to the addres 
+The file containing the slides must be pushed
+into your github repository __at the latest on__
    
-   gio XYZ irif.fr 
+   December the 10th, 15:00
    
-and correctly received __before__
-   
-   15:00 December the 10th
-   
-The subject of the e-mail must have the format
-   
-   [bds-2425] slides: GROUPNAME
-   
-where GROUP_NAME is the name of your group.
-Any dely or error in following the above instructions
-will be taken into account in the evaluation.
+Any file not accessible starting from that time
+will give your group the note 0.
